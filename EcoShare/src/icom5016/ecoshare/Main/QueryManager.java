@@ -49,19 +49,16 @@ public class QueryManager {
 			preparedStatement.setString(6, "TestComment");
 			preparedStatement.executeUpdate();
 
-			preparedStatement = connect
-					.prepareStatement("SELECT myuser, webpage, datum, summary, COMMENTS from FEEDBACK.COMMENTS");
+			preparedStatement = connect.prepareStatement("SELECT myuser, webpage, datum, summary, COMMENTS from FEEDBACK.COMMENTS");
 			resultSet = preparedStatement.executeQuery();
 			writeResultSet(resultSet);
 
 			// remove again the insert comment
-			preparedStatement = connect
-					.prepareStatement("delete from FEEDBACK.COMMENTS where myuser= ? ; ");
+			preparedStatement = connect.prepareStatement("delete from FEEDBACK.COMMENTS where myuser= ? ; ");
 			preparedStatement.setString(1, "Test");
 			preparedStatement.executeUpdate();
 
-			resultSet = statement
-					.executeQuery("select * from FEEDBACK.COMMENTS");
+			resultSet = statement.executeQuery("select * from FEEDBACK.COMMENTS");
 			writeMetaData(resultSet);
 
 		} catch (Exception e) {
