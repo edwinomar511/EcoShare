@@ -61,9 +61,8 @@
         padding: 0;
       }
       .navbar .nav {
-        margin: 0;
-        display: table;
-        width: 100%;
+	display: table;
+	width: 100%;
       }
       .navbar .nav li {
         display: table-cell;
@@ -84,6 +83,10 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+	  .nav a {
+    background-color: #ecf0f1 !important;
+    color: #2d525d !important;
+}
     </style>
   <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -99,7 +102,9 @@
   <script type="text/javascript" src="ScriptLibrary/jquery-latest.pack.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+  <script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
   <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+  <link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -112,7 +117,7 @@
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
               </ul>
             </div>
@@ -133,28 +138,27 @@
           <input type="date" class="form-control" placeholder="12:00" >
           <input type="time" class="form-control" placeholder="September" >
         </p>
-        <button href="RideInformation.html" type="submit">Find</button>
+        <button type="submit" href="RideInformation.html">Find</button>
         <p>&nbsp;</p>
         </form>
-<B>Available Rides:<BR>
-Click a Ride for More Info.</B> <BR>
-<SELECT NAME="Rides" SIZE="15" MULTIPLE >
-<OPTION> --------------------------------------------------
-<OPTION SELECTED> September, 12 -> 10:00am
-<OPTION> --------------------------------------------------
-<OPTION> September, 12 -> 11:00am
-<OPTION> --------------------------------------------------
-<OPTION> September, 12 -> 1:00pm
-<OPTION> --------------------------------------------------
-<OPTION> September, 13 -> 11:30am
-<OPTION> --------------------------------------------------
-<OPTION> September, 13 -> 1:00pm
-<OPTION> --------------------------------------------------
-<OPTION> September, 13 -> 2:00pm
-<OPTION> --------------------------------------------------
-<OPTION> September, 14 -> 5:00pm
-<OPTION> --------------------------------------------------
-</SELECT>
+        <p><B>Available Rides:<BR>
+        Click a Ride for More Info.</B></p>
+        <form name="form3" method="post" action="">
+          <span id="spryselect1">
+            <label for="Avaliable Rides:">Available Rides:</label>
+            <select name="Avaliable Rides:" size="1" class="text-info" id="Avaliable Rides:">
+              <option>Ride 1</option>
+              <option>Ride 2</option>
+              <option>Ride 3</option>
+            </select>
+            <p>
+        </p>
+            <span class="selectRequiredMsg">Please select an item.</span></span>
+        </form>
+        <a class="btn btn-large btn-success" href="RideInformation.html">Select Ride</a>
+        <p>&nbsp; </p>
+        
+        
         <form name="form2" method="post" action="">
           <span id="sprytextfield2">
           <label for="To:"></label>
@@ -184,6 +188,7 @@ Click a Ride for More Info.</B> <BR>
   <script type="text/javascript">
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
   </script>
   </body>
 </html>

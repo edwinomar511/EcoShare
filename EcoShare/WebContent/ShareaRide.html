@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Template &middot; Bootstrap</title>
+  <title>EcoShare &middot; Share a Ride</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -90,6 +90,10 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+	  .nav a {
+    background-color: #ecf0f1 !important;
+    color: #2d525d !important;
+}
     </style>
   <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -105,7 +109,9 @@
   <script type="text/javascript" src="ScriptLibrary/jquery-latest.pack.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
   <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+  <script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
   <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+  <link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -118,7 +124,7 @@
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
               </ul>
             </div>
@@ -153,13 +159,25 @@
       
       <p>
           <input type="text" class="form-control" placeholder="Price" required autofocus>
-          <button class="btnset btn-lg btn-success" type="submit">Set</button>
-        </p>
-
+      </p>
+      <form name="form3" method="post" action="">
+        <strong><span id="sprytextarea1">
+        <label for="Additional Comments:">Additional Comments:</label>
+          </span></strong>
+        <p><span id="sprytextarea1">
+        <textarea name="Additional Comments:" id="Additional Comments:" cols="45" rows="5"></textarea>
+        <span class="textareaRequiredMsg">A value is required.</span></span></p>
+        <p>
+          <input type="email" class="form-control" placeholder="Enter an Email" required>
+          </p>
       
-              <button class="btn btn-lg btn-success" type="submit">Share</button>
-
+      <p>&nbsp; </p>
+      </form>
       
+      <p>
+      <a href="Register.html" target="_parent"><button class="btnset btn-lg btn-success" type="submit">Share Ride</button></a>
+        
+      </p>
       </div>
 
       <!-- Example row of columns -->
@@ -182,6 +200,7 @@
   <script type="text/javascript">
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
 var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
   </script>
   </body>
 </html>
