@@ -11,20 +11,20 @@ public class QueryManager {
 	public QueryManager(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connect = DriverManager.getConnection("jdbc:mysql://EcoShare" + "user=root&password=t12uprmicom");
+			connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1/EcoShare" + "user=root&password=t12uprmicom");
 		} catch (SQLException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public ResultSet findRide(String query) throws Exception{	 
+	public ResultSet findRide(String query){	 
 		try {
 			statement = connect.createStatement();
 			resultSet = statement.executeQuery(query); 
 
 		} catch (Exception e) {
-			throw e;
+			return null;
 		}
 		return resultSet;
 	}
