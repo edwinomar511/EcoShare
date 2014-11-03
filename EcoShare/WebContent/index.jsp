@@ -118,6 +118,7 @@ body {
 
   <body>
 <div class="container">
+<div class="masthead">
     <a href="/EcoShare/index.jsp"> <img
 				src="/EcoShare/EcoShare_title.png" width="844" height="207"
 				align="absmiddle">
