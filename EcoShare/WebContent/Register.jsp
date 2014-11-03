@@ -10,15 +10,15 @@
   <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
       body {
-        padding-top: 20px;
+        padding-top: 60px;
         padding-bottom: 60px;
         margin: 15px 0;
       }
 
       /* Custom container */
       .container {
-	margin: 75;
-	max-width: 2000px;
+	margin: 0 auto;
+	max-width: 1000px;
       }
       .container > hr {
         margin: 60px 0;
@@ -67,7 +67,6 @@
         padding: 0;
       }
       .navbar .nav {
-        margin: 0;
         display: table;
         width: 100%;
       }
