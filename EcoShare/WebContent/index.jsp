@@ -139,18 +139,13 @@ body {
     <div class="google-maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d484871.4157733634!2d-66.48116070655361!3d18.29895852515601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1410387045716" width="600" height="450" frameborder="5" style="border:5;"></iframe>
       </div>
-      
-    <form name="form2" method="post" action="">
-        <span id="sprytextfield2">
-      <label for="To:"></label>
-      <input type="text" placeholder="From:" name="To:" id="To:">
-      <span class="textfieldRequiredMsg">A value is required.</span></span> <span id="sprytextfield3">
-      <input type="text" placeholder="To:" name="text2" id="text2">
-      <label for="text2"></label>
-      <span class="textfieldRequiredMsg">A value is required.</span></span>
-      </form>
-    <a class="btn1 btn-large btn-success" href="/EcoShare/FindaRide.jsp">Quick Search</a> </div>
-    
+
+	<form id="index" action="Find" method = "POST">
+			<input type="text" name="from" placeholder="From:">
+			<input type="text" name="to" placeholder="To:">
+			<!-- <input type="submit" value="Submit" > -->
+		</form>
+	<a class="btn1 btn-large btn-success" href="/EcoShare/FindaRide.jsp">Quick Search</a> </div>
     <!-- Example row of columns -->
     <div class="row-fluid">
     <div class="span4">

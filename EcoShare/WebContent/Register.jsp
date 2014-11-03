@@ -131,29 +131,17 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <form class="form-signin" role="form">
+        <form id="index" action="Find" method = "POST">
           <h2 class="form-signin-heading">Register</h2>
-        <p>
-          <input type="email" class="form-control" placeholder="Email:" required autofocus>
-          </p>
-        <p>
-          <input type="email" class="form-control" placeholder="Name:" required>
-          </p>
-        <p>
-          <input type="email" class="form-control" placeholder="Phone#:" required>
-        </p>
-        <h3 class="form-signin-heading">If already registered, use the email associated with the account to post a ride.        </h3>
-        <h2 class="form-signin-heading">Vehicle Information</h2>
-        <p>
-          <input type="email" class="form-control" placeholder="Make:" required>
-        </p>
-        <p>
-          <input type="email" class="form-control" placeholder="Model:" required>
-        </p>
-        <p>
-          <input type="email" class="form-control" placeholder="Year:" required>
-        </p>
-        </form>
+          <h3 class="form-signin-heading">If already registered, use the email associated with the account to post a ride.        </h3>
+			<p><input type="text" name="email" placeholder="Email:"></p>
+			<p><input type="text" name="name" placeholder="Name"></p>
+			<p><input type="text" name="phone" placeholder="Phone#"></p>
+			<p><input type="text" name="make" placeholder="Car Make:"></p>
+			<p><input type="text" name="model" placeholder="Car Model:"></p>
+			<p><input type="text" name="year" placeholder="Car Year:"></p>
+			<!-- <input type="submit" value="Submit" > -->
+		</form>
 <form name="form3" method="post" action="">
         <span id="sprytextarea1"><span class="textareaRequiredMsg"> value is requir</span></span>
         </form>

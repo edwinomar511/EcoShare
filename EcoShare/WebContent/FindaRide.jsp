@@ -1,7 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" src="/EcoShare/datepicker/ts_picker.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>EcoShare - Find a Ride</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
@@ -128,14 +129,17 @@
       <div class="jumbotron">
         <form class="text" role="form">
           <h2>Find a Ride</h2>
-        <p>
-          <input type="text" class="form-control" placeholder="From:" autofocus>
-          <input type="text" class="form-control" placeholder="To:" >
-        </p>
+        <form id="index" action="Find" method = "POST">
+			<input type="text" name="from" placeholder="From:">
+			<input type="text" name="to" placeholder="To:">
+			<!-- <input type="submit" value="Submit" > -->
+		</form>
         <h2 class="form-signin-heading">Date & Time</h2>
         <p>
-          <input type="date" class="form-control" placeholder="12:00" >
-          <input type="time" class="form-control" placeholder="September" >
+          <form name="tstest" method="post">
+		<input type="Text" name="timestamp" value="">
+		<a href="javascript:show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);"><img src="/EcoShare/cal.gif" width="16" height="16" border="0" alt="Click Here to Pick up the timestamp"></a>
+		</form>
         </p>
         <button type="submit" href="/EcoShare/RideInformation.jsp">Find</button>
         <p>&nbsp;</p>

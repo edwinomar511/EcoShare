@@ -129,13 +129,18 @@
         <form class="form-signin" role="form">
           <h2 class="form-signin-heading">Share a Ride</h2>
         <p>
-          <input type="email" class="form-control" placeholder="From:" required autofocus>
-          <input type="email" class="form-control" placeholder="To:" required>
+          <form id="index" action="Find" method = "POST">
+			<input type="text" name="from" placeholder="From:">
+			<input type="text" name="to" placeholder="To:">
+			<!-- <input type="submit" value="Submit" > -->
+		</form> 
         </p>
         <h2 class="form-signin-heading">Date & Time</h2>
-        <p>
-          <input type="date" class="form-control" placeholder="12:00" required>
-          <input type="time" class="form-control" placeholder="September" required>
+          <p>
+          <form name="tstest" method="post">
+		<input type="Text" name="timestamp" value="">
+		<a href="javascript:show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);"><img src="/EcoShare/cal.gif" width="16" height="16" border="0" alt="Click Here to Pick up the timestamp"></a>
+		</form>
         </p>
         <p>&nbsp;</p>
         </form>
@@ -149,9 +154,10 @@
           <span class="textfieldRequiredMsg">A value is required.</span></span>
       </form>
       
-      <p>
-          <input type="text" class="form-control" placeholder="Price" required autofocus>
-      </p>
+     <form id="index" action="Find" method = "POST">
+			<input type="text" name="price" placeholder="Price">
+			<!-- <input type="submit" value="Submit" > -->
+		</form>
       <form name="form3" method="post" action="">
         <strong><span id="sprytextarea1">
         <label for="Additional Comments:">Additional Comments:</label>
@@ -160,7 +166,10 @@
         <textarea name="Additional Comments:" id="Additional Comments:" cols="45" rows="5"></textarea>
         <span class="textareaRequiredMsg">A value is required.</span></span></p>
         <p>
-          <input type="email" class="form-control" placeholder="Enter an Email" required>
+          <form id="index" action="Find" method = "POST">
+			<input type="text" name="email" placeholder="Enter an Email:">
+			<!-- <input type="submit" value="Submit" > -->
+		</form>
           </p>
       
       <p>&nbsp; </p>
