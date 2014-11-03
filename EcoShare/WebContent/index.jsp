@@ -124,7 +124,7 @@ body {
         <div class="container">
             <ul class="nav">
             <li class="active"><a href="/EcoShare/index.jsp">Find a Ride</a></li>
-            <li><a href="/EcoShare/Share a Ride.jsp">Share a Ride</a></li>
+            <li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
           </ul>
           </div>
       </div>
