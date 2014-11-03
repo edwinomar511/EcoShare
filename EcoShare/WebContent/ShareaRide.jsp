@@ -12,19 +12,20 @@
       body {
         padding-top: 20px;
         padding-bottom: 60px;
+        margin: 15px 0;
       }
 
       /* Custom container */
       .container {
 	margin: 0 auto;
-	max-width: 2000px;
+	max-width: 1000px;
       }
       .container > hr {
         margin: 60px 0;
       }
 
       .jumbotron {
-        margin: 50px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {
@@ -145,7 +146,6 @@
         <p>&nbsp;</p>
         </form>
 
-        <img src="maps.png" width="1344" height="563">
 <form name="form2" method="post" action="">
       <span id="sprytextfield2">
       <label for="To:"></label>

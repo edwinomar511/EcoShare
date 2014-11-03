@@ -12,6 +12,7 @@
       body {
         padding-top: 20px;
         padding-bottom: 60px;
+        margin: 15px 0;
       }
 
       /* Custom container */
@@ -24,7 +25,7 @@
       }
 
       .jumbotron {
-        margin: 50px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {
@@ -137,14 +138,12 @@
           <h2 class="form-signin-heading">Ride Information        </h2>
         </form>
         
-<h2>Mayaguez to San Juan</h2>
+	<h2>Mayaguez to San Juan</h2>
         <h2>Time: 3:00PM</h2>
         <p><a href="/EcoShare/AcceptedRide.jsp" class="btn btn-primary btn-large">Accept Ride &raquo;</a></p>
-        <img src="maps.png" width="578" height="363">
         <h4>Driver: name@email.com</h4>
         
-<h2>&nbsp;</h2>
-<form name="form2" method="post" action="">
+	<form name="form2" method="post" action="">
       <span id="sprytextfield2">
       <label for="To:"></label>
       <span class="textfieldRequiredMsg">A value i</span></span><span id="sprytextfield3">
@@ -153,7 +152,7 @@
       </form>
       
       <form name="form3" method="post" action="">
-        <img src="driver.png" alt="rating" width="187" height="207" align="texttop"><span id="sprytextarea1"><label for="Additional Comments:">Additional Comments:</label>
+        <span id="sprytextarea1"><label for="Additional Comments:">Additional Comments:</label>
           <textarea name="Additional Comments:" id="Additional Comments:" cols="45" rows="5"></textarea>
           <span class="textareaRequiredMsg">A value is required.</span></span>
       </form>

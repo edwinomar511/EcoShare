@@ -12,6 +12,7 @@
       body {
         padding-top: 20px;
         padding-bottom: 60px;
+        margin: 15px 0;
       }
 
       /* Custom container */
@@ -23,9 +24,8 @@
         margin: 60px 0;
       }
 
-      /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 50px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {

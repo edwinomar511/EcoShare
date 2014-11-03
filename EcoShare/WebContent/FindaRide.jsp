@@ -13,19 +13,20 @@
       body {
         padding-top: 20px;
         padding-bottom: 60px;
+        margin: 15px 0;
       }
 
       /* Custom container */
       .container {
 	margin: 0 auto;
-	max-width: 2000px;
+	max-width: 1000px;
       }
       .container > hr {
         margin: 60px 0;
       }
 
       .jumbotron {
-        margin: 50px 0;
+        margin: 0px 0;
         text-align: center;
       }
       .jumbotron h1 {

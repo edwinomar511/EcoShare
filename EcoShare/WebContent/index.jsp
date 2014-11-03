@@ -10,8 +10,9 @@
   <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
 body {
-	padding-top: 20px;
+	padding-top: 60px;
 	padding-bottom: 60px;
+	margin: 15px 0;
 }
 /* Custom container */
     .container {
@@ -22,7 +23,7 @@ body {
 	margin: 60px 0;
 }
 .jumbotron {
-	margin: 50px 0;
+	margin: 0px 0;
 	text-align: center;
 }
 .jumbotron h1 {
@@ -78,7 +79,7 @@ body {
 	border-radius: 0px 3px 3px 0px;
 }
 	  .nav a {
-    background-color: #ecf0f1 !important;
+    background-color:  #ecf0f1 !important;
     color: #2d525d !important;
 }
 .google-maps {
