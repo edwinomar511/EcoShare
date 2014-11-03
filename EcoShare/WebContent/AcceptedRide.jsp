@@ -115,13 +115,16 @@
   <div class="container">
 
       <div class="masthead">
-		<img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
+		<a href="/EcoShare/index.jsp"> <img
+				src="/EcoShare/EcoShare_title.png" width="844" height="207"
+				align="absmiddle">
+			</a>
                                 <div class="navbar">
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                 <li><a href="/EcoShare/index.jsp">Home</a></li>
-                <li><a href="/EcoShare/About.jsp">About</a></li>
+                 <li><a href="/EcoShare/index.jsp">Find a Ride</a></li>
+                <li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
               </ul>
             </div>
       </div>

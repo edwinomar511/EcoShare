@@ -119,8 +119,11 @@
   <div class="container">
 
       <div class="masthead">
-		<img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
-                                <div class="navbar">
+<a href="/EcoShare/index.jsp"> <img
+				src="/EcoShare/EcoShare_title.png" width="844" height="207"
+				align="absmiddle">
+			</a>
+	<div class="navbar">
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
