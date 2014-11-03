@@ -84,6 +84,10 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+      	  .nav a {
+    background-color: #ecf0f1 !important;
+    color: #2d525d !important;
+}
     </style>
   <link href="/EcoShare/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

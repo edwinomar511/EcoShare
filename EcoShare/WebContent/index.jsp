@@ -77,6 +77,10 @@ body {
 	border-right: 0;
 	border-radius: 0px 3px 3px 0px;
 }
+	  .nav a {
+    background-color: #ecf0f1 !important;
+    color: #2d525d !important;
+}
 .google-maps {
 	position: relative;
 	padding-bottom: 75%;

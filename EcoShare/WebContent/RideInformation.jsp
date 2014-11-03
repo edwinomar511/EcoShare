@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>EcoShare &middot; Ride Information</title>
+  <title>EcoShare - Ride Information</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -16,14 +16,13 @@
 
       /* Custom container */
       .container {
-	margin: 75;
+	margin: 0 auto;
 	max-width: 2000px;
       }
       .container > hr {
         margin: 60px 0;
       }
 
-      /* Main marketing message and sign up button */
       .jumbotron {
         margin: 50px 0;
         text-align: center;
@@ -46,12 +45,6 @@
 	padding: 14px 24px;
 	margin: 15px 0;
       }
-	  
-	  .jumbotron .btnset {
-	font-size: 12px;
-	padding: 3px 16px;
-	margin: 0px 0;
-      }
 
       /* Supporting marketing content */
       .marketing {
@@ -67,9 +60,8 @@
         padding: 0;
       }
       .navbar .nav {
-        margin: 0;
-        display: table;
-        width: 100%;
+	display: table;
+	width: 100%;
       }
       .navbar .nav li {
         display: table-cell;
@@ -84,11 +76,11 @@
       }
       .navbar .nav li:first-child a {
         border-left: 0;
-        border-radius: 3px 0 0 3px;
+        border-radius: 3px 0px 0px 3px;
       }
       .navbar .nav li:last-child a {
         border-right: 0;
-        border-radius: 0 3px 3px 0;
+        border-radius: 0px 3px 3px 0px;
       }
 	  .nav a {
     background-color: #ecf0f1 !important;

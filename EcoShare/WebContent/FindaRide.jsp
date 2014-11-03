@@ -16,14 +16,13 @@
 
       /* Custom container */
       .container {
-	margin: 75;
+	margin: 0 auto;
 	max-width: 2000px;
       }
       .container > hr {
         margin: 60px 0;
       }
 
-      /* Main marketing message and sign up button */
       .jumbotron {
         margin: 50px 0;
         text-align: center;
@@ -77,11 +76,11 @@
       }
       .navbar .nav li:first-child a {
         border-left: 0;
-        border-radius: 3px 0 0 3px;
+        border-radius: 3px 0px 0px 3px;
       }
       .navbar .nav li:last-child a {
         border-right: 0;
-        border-radius: 0 3px 3px 0;
+        border-radius: 0px 3px 3px 0px;
       }
 	  .nav a {
     background-color: #ecf0f1 !important;
@@ -109,21 +108,21 @@
 
   <body>
 
-  <div class="container">
-
-      <div class="masthead">
-		<img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
-                                <div class="navbar">
-      <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li><a href="/EcoShare/index.jsp">Home</a></li>
-                <li><a href="/EcoShare/About.jsp">About</a></li>
-              </ul>
-            </div>
+ <div class="container">
+    <div class="masthead"> <img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
+    <div class="navbar">
+        <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav">
+            <li><a href="/EcoShare/index.jsp">Home</a></li>
+            <li><a href="/EcoShare/About.jsp">About</a></li>
+          </ul>
+          </div>
       </div>
-        </div><!-- /.navbar -->
       </div>
+    <!-- /.navbar --> 
+  </div>
+    
 
       <!-- Jumbotron -->
       <div class="jumbotron">
