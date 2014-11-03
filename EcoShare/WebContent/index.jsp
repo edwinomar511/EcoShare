@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Victor, Edwin, Kevin">
   <!-- Le styles -->
-  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
 body {
 	padding-top: 20px;
@@ -94,32 +94,32 @@ body {
 
 
 </style>
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/EcoShare/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
   <![endif]-->
   <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
-  <script type="text/javascript" src="ScriptLibrary/jquery-latest.pack.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-  <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-  <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/EcoShare/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/EcoShare/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/EcoShare/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/EcoShare/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/EcoShare/bootstrap/ico/favicon.png">
+  <script type="text/javascript" src="/EcoShare/ScriptLibrary/jquery-latest.pack.js"></script>
+  <script type="text/javascript" src="/EcoShare/bootstrap/js/bootstrap.js"></script>
+  <script src="/EcoShare/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+  <link href="/EcoShare/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
 <div class="container">
-    <div class="masthead"> <img src="EcoShare_title.png" width="844" height="207" align="absmiddle">
+    <div class="masthead"> <img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
     <div class="navbar">
         <div class="navbar-inner">
         <div class="container">
             <ul class="nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
+            <li class="active"><a href="/EcoShare/index.jsp">Home</a></li>
+            <li><a href="/EcoShare/About.jsp">About</a></li>
           </ul>
           </div>
       </div>
@@ -129,8 +129,8 @@ body {
     
     <!-- Jumbotron -->
     <div class="jumbotron"> 
-    <a class="btn btn-large btn-success" href="FindaRide.html">Find a Ride</a> 
-    <a class="btn btn-large btn-success" href="ShareaRide.html">Share a Ride</a>
+    <a class="btn btn-large btn-success" href="/EcoShare/FindaRide.jsp">Find a Ride</a> 
+    <a class="btn btn-large btn-success" href="/EcoShare/ShareaRide.jsp">Share a Ride</a>
     
     <div class="google-maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d484871.4157733634!2d-66.48116070655361!3d18.29895852515601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1410387045716" width="600" height="450" frameborder="5" style="border:5;"></iframe>
@@ -145,7 +145,7 @@ body {
       <label for="text2"></label>
       <span class="textfieldRequiredMsg">A value is required.</span></span>
       </form>
-    <a class="btn1 btn-large btn-success" href="FindaRide.html">Quick Search</a> </div>
+    <a class="btn1 btn-large btn-success" href="/EcoShare/FindaRide.jsp">Quick Search</a> </div>
     
     <!-- Example row of columns -->
     <div class="row-fluid">

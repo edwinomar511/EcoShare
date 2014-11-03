@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>EcoShare &middot; Ride Information</title>
+  <title>EcoShare &middot; Share a Ride</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- Le styles -->
-  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
       body {
         padding-top: 20px;
@@ -95,30 +95,23 @@
     color: #2d525d !important;
 }
     </style>
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/EcoShare/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
     <![endif]-->
   <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
-  <script type="text/javascript" src="ScriptLibrary/jquery-latest.pack.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-  <script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
-  <script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
-  <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-  .btn2 {  display: inline;
-  margin-left: .3em;
-  zoom: 1;
-  white-space: nowrap;
-}
-  </style>
-  <link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/EcoShare/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/EcoShare/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/EcoShare/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/EcoShare/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/EcoShare/bootstrap/ico/favicon.png">
+  <script type="text/javascript" src="/EcoShare/ScriptLibrary/jquery-latest.pack.js"></script>
+  <script type="text/javascript" src="/EcoShare/bootstrap/js/bootstrap.js"></script>
+  <script src="/EcoShare/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+  <script src="/EcoShare/SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+  <link href="/EcoShare/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+  <link href="/EcoShare/SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -126,13 +119,13 @@
   <div class="container">
 
       <div class="masthead">
-		<img src="EcoShare_title.png" width="844" height="207" align="absmiddle">
+		<img src="/EcoShare/EcoShare_title.png" width="844" height="207" align="absmiddle">
                                 <div class="navbar">
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                 <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
+                <li><a href="/EcoShare/index.jsp">Home</a></li>
+                <li><a href="/EcoShare/About.jsp">About</a></li>
               </ul>
             </div>
       </div>
@@ -142,30 +135,49 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <form class="form-signin" role="form">
-          <h2 class="form-signin-heading">Ride Information        </h2>
+          <h2 class="form-signin-heading">Share a Ride</h2>
+        <p>
+          <input type="email" class="form-control" placeholder="From:" required autofocus>
+          <input type="email" class="form-control" placeholder="To:" required>
+        </p>
+        <h2 class="form-signin-heading">Date & Time</h2>
+        <p>
+          <input type="date" class="form-control" placeholder="12:00" required>
+          <input type="time" class="form-control" placeholder="September" required>
+        </p>
+        <p>&nbsp;</p>
         </form>
-        
-<h2>Mayaguez to San Juan</h2>
-        <h2>Time: 3:00PM</h2>
-        <p><a href="AcceptedRide.html" class="btn btn-primary btn-large">Accept Ride &raquo;</a></p>
-        <img src="maps.png" width="578" height="363">
-        <h4>Driver: name@email.com</h4>
-        
-<h2>&nbsp;</h2>
+
+        <img src="maps.png" width="1344" height="563">
 <form name="form2" method="post" action="">
       <span id="sprytextfield2">
       <label for="To:"></label>
-      <span class="textfieldRequiredMsg">A value i</span></span><span id="sprytextfield3">
+          <span class="textfieldRequiredMsg">A value i</span></span><span id="sprytextfield3">
           <label for="text2"></label>
           <span class="textfieldRequiredMsg">A value is required.</span></span>
       </form>
       
+      <p>
+          <input type="text" class="form-control" placeholder="Price" required autofocus>
+      </p>
       <form name="form3" method="post" action="">
-        <img src="driver.png" alt="rating" width="187" height="207" align="texttop"><span id="sprytextarea1"><label for="Additional Comments:">Additional Comments:</label>
-          <textarea name="Additional Comments:" id="Additional Comments:" cols="45" rows="5"></textarea>
-          <span class="textareaRequiredMsg">A value is required.</span></span>
+        <strong><span id="sprytextarea1">
+        <label for="Additional Comments:">Additional Comments:</label>
+          </span></strong>
+        <p><span id="sprytextarea1">
+        <textarea name="Additional Comments:" id="Additional Comments:" cols="45" rows="5"></textarea>
+        <span class="textareaRequiredMsg">A value is required.</span></span></p>
+        <p>
+          <input type="email" class="form-control" placeholder="Enter an Email" required>
+          </p>
+      
+      <p>&nbsp; </p>
       </form>
-      <p>&nbsp;</p>
+      
+      <p>
+      <a href="/EcoShare/Register.jsp" target="_parent"><button class="btnset btn-lg btn-success" type="submit">Share Ride</button></a>
+        
+      </p>
       </div>
 
       <!-- Example row of columns -->
