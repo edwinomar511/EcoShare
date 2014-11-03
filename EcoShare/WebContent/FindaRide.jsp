@@ -120,7 +120,7 @@
         <div class="navbar-inner">
         <div class="container">
             <ul class="nav">
-            <li><a href="/EcoShare/index.jsp">Find a Ride</a></li>
+            <li class="active"><a href="/EcoShare/index.jsp">Find a Ride</a></li>
             <li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
           </ul>
           </div>
