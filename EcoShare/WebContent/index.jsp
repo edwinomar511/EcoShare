@@ -123,8 +123,8 @@ body {
         <div class="navbar-inner">
         <div class="container">
             <ul class="nav">
-            <li class="active"><a href="/EcoShare/index.jsp">Home</a></li>
-            <li><a href="/EcoShare/About.jsp">About</a></li>
+            <li class="active"><a href="/EcoShare/index.jsp">Find a Ride</a></li>
+            <li><a href="/EcoShare/Share a Ride.jsp">Share a Ride</a></li>
           </ul>
           </div>
       </div>
@@ -134,8 +134,6 @@ body {
     
     <!-- Jumbotron -->
     <div class="jumbotron"> 
-    <a class="btn btn-large btn-success" href="/EcoShare/FindaRide.jsp">Find a Ride</a> 
-    <a class="btn btn-large btn-success" href="/EcoShare/ShareaRide.jsp">Share a Ride</a>
     
     <div class="google-maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d484871.4157733634!2d-66.48116070655361!3d18.29895852515601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1410387045716" width="600" height="450" frameborder="5" style="border:5;"></iframe>
