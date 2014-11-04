@@ -1,0 +1,21 @@
+<Context>
+
+<Resource name="jdbc/EcoShare"
+
+auth="Container"
+
+type="javax.sql.DataSource"
+
+username="root"
+
+password="t12uprmicom"
+
+driverClassName="com.mysql.jdbc.Driver"
+
+url="jdbc:mysql://136.145.116.238:3306/EcoShare"
+
+maxActive="15"
+
+maxIdle="3"/>
+
+</Context>
