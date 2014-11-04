@@ -33,14 +33,15 @@ public class Find extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		System.out.println("doGet method of Find Servlet.");
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String from = request.getParameter("from");
+		/*String from = request.getParameter("from");
 		String to = request.getParameter("to");
 		Time time = Time.valueOf(request.getParameter("time"));
 		Date date = Date.valueOf(request.getParameter("date"));
@@ -55,8 +56,10 @@ public class Find extends HttpServlet {
 		}
 		else{
 			//do something here too haha...
-		}
-			
+		}*/
+		System.out.println("doPost method of Find Servlet.");
+		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
+		
 	}
 
 }

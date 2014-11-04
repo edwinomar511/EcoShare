@@ -12,9 +12,9 @@ public class QueryManager {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1/EcoShare" + "user=root&password=t12uprmicom");
+			System.out.println("Wuujuuu!! Funciona!!");
 		} catch (SQLException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Mierda!, no funcionó... :(");
 		}
 	}
 
