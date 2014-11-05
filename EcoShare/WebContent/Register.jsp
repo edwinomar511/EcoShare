@@ -44,7 +44,7 @@ function validateForm() {
 }
 </script>
   <!-- Le styles -->
-  <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
       body {
         padding-top: 60px;
@@ -131,20 +131,20 @@ function validateForm() {
     color: #2d525d !important;
 }
     </style>
-  <link href="/EcoShare/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
     <![endif]-->
   <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/EcoShare/bootstrap/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/EcoShare/bootstrap/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/EcoShare/bootstrap/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="/EcoShare/bootstrap/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="/EcoShare/bootstrap/ico/favicon.png">
-  <script type="text/javascript" src="/EcoShare/ScriptLibrary/jquery-latest.pack.js"></script>
-  <script type="text/javascript" src="/EcoShare/bootstrap/js/bootstrap.js"></script><script src="/EcoShare/SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
-  <link href="/EcoShare/SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="/bootstrap/ico/favicon.png">
+  <script type="text/javascript" src="/ScriptLibrary/jquery-latest.pack.js"></script>
+  <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script><script src="/SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+  <link href="/SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -152,16 +152,16 @@ function validateForm() {
   <div class="container">
 
       <div class="masthead">
-		<a href="/EcoShare/index.jsp"> <img
-				src="/EcoShare/EcoShare_title.png" width="844" height="207"
+		<a href="/index.jsp"> <img
+				src="_title.png" width="844" height="207"
 				align="absmiddle">
 			</a>
                                 <div class="navbar">
       <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li><a href="/EcoShare/index.jsp">Find a Ride</a></li>
-                <li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
+                <li><a href="/index.jsp">Find a Ride</a></li>
+                <li><a href="/ShareaRide.jsp">Share a Ride</a></li>
               </ul>
             </div>
       </div>
@@ -171,8 +171,8 @@ function validateForm() {
       <!-- Jumbotron -->
       <div class="jumbotron">
         
-          <img src="/EcoShare/Register.png" width="279" height="52" align="absmiddle"></br>
-		  <img src="/EcoShare/RegisterInfo.png" width="279" height="52" align="absmiddle"></br>
+          <img src="/Register.png" width="279" height="52" align="absmiddle"></br>
+		  <img src="/RegisterInfo.png" width="279" height="52" align="absmiddle"></br>
           <form id="index" name="myForm" method="post" action="Register" onsubmit="return validateForm()">
 					<input type="text" name="email" placeholder="Email:"></br>
 					<input type="text" name="name" placeholder="Name:"></br>

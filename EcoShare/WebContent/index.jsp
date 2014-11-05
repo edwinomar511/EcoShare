@@ -56,7 +56,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 <!-- Le styles -->
-<link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
 	padding-top: 60px;
@@ -160,7 +160,7 @@ body {
 	height: 100% !important;
 }
 </style>
-<link href="/EcoShare/bootstrap/css/bootstrap-responsive.css"
+<link href="/bootstrap/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -168,37 +168,37 @@ body {
   <![endif]-->
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="/EcoShare/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+	href="/bootstrap/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="/EcoShare/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+	href="/bootstrap/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="/EcoShare/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+	href="/bootstrap/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
-	href="/EcoShare/bootstrap/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="/EcoShare/bootstrap/ico/favicon.png">
+	href="/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/bootstrap/ico/favicon.png">
 <script type="text/javascript"
-	src="/EcoShare/ScriptLibrary/jquery-latest.pack.js"></script>
-<script type="text/javascript" src="/EcoShare/bootstrap/js/bootstrap.js"></script>
-<script src="/EcoShare/SpryAssets/SpryValidationTextField.js"
+	src="/ScriptLibrary/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
+<script src="/SpryAssets/SpryValidationTextField.js"
 	type="text/javascript"></script>
-<link href="/EcoShare/SpryAssets/SpryValidationTextField.css"
+<link href="/SpryAssets/SpryValidationTextField.css"
 	rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="container">
 		<div class="masthead">
-			<a href="/EcoShare/index.jsp"> <img
-				src="/EcoShare/EcoShare_title.png" width="844" height="207"
+			<a href="/index.jsp"> <img
+				src="_title.png" width="844" height="207"
 				align="absmiddle">
 			</a>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li class="active"><a href="/EcoShare/index.jsp">Find a
+							<li class="active"><a href="/index.jsp">Find a
 									Ride</a></li>
-							<li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
+							<li><a href="/ShareaRide.jsp">Share a Ride</a></li>
 						</ul>
 					</div>
 				</div>
@@ -209,7 +209,7 @@ body {
 		<!-- Jumbotron -->
 		<div class="jumbotron">
 		
-		<img src="/EcoShare/FindaRide.png" width="279" height="52" align="absmiddle"></br>
+		<img src="/FindaRide.png" width="279" height="52" align="absmiddle"></br>
 		
 			<form id="index" method="post" action="Find">
 				<select id="From" name="from" onchange="return setValue();">

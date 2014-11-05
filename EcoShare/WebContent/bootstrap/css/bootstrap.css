@@ -235,7 +235,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-image: url(/EcoShare//background.png);
+  background-image: url(//background.png);
   background-color: #ffffff;
   div {
   opacity: 0.2;
@@ -303,7 +303,7 @@ a:focus {
 .navbar-fixed-bottom .container {
 	width: 940px;
 	background: ##878787;
-	background-image: url(/EcoShare//bootstrap/img/zenbg-1.png), url(/EcoShare//bootstrap/img/zenbg-1.png);
+	background-image: url(//bootstrap/img/zenbg-1.png), url(//bootstrap/img/zenbg-1.png);
 	background-repeat: repeat, repeat;
 	margin: 15px;
 
