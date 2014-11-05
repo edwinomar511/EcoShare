@@ -7,6 +7,7 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Time;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,28 +60,34 @@ public class ShareaRide extends HttpServlet {
 		}*/
 		String from= request.getParameter("from");
 		String to = request.getParameter("to");
-		String minprice = request.getParameter("minprice");
-		String maxprice = request.getParameter("maxprice");
+		String price = request.getParameter("price");
 		String date = request.getParameter("date");
 		String time = request.getParameter("time");
 		String email = request.getParameter("email");
 		String comments = request.getParameter("comments");
-		System.out.println("doPost method of ShareaRide Servlet.");
-		System.out.println(from);
-		System.out.println(to);
-		System.out.println("Price from: $"+minprice+" to: $"+maxprice);
-		System.out.println(date);
-		System.out.println(time);
-		System.out.println(email);
-		System.out.println(comments);
-		if(email == ""){
-			request.getRequestDispatcher("/Register.jsp").forward(request, response);	
-
-		}
-		else{
-		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
 		
+		if(comments.equals("Please limit your response to 200 characters.")){
+			comments = "No Comments";
 		}
+		
+		System.out.println("doPost method of ShareaRide Servlet.");
+		String rideID = generateRideID(email);
+		String query = "INSERT into Ride (ride_id, from_location, to_location, date, time, price, comment)"
+						+ " VALUES ('" + rideID +"','"+from+"','"+to+"',"+price+","+date+","+time+",'"+email+"','"+comments+"')";
+		System.out.println(query);
+		request.getRequestDispatcher("/Register.jsp").forward(request, response);	
+
+	}
+	
+	private String generateRideID(String email){
+		if(email.equals("")){
+			email = "def";
+		}
+		String number = Long.toString(System.currentTimeMillis());
+		String rideID = email.substring(0,2) + number.substring(number.length()-7, number.length()-1);
+		return rideID;
+		
+	
 	}
 
 }

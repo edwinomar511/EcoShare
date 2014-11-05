@@ -8,11 +8,19 @@
   <meta name="author" content="">
   <script>
 function validateForm() {
+	var email = document.forms["myForm"]["email"].value;
+    var atpos = email.indexOf("@");
+    var dotpos = email.lastIndexOf(".");
     var name = document.forms["myForm"]["name"].value;
     var phone = document.forms["myForm"]["phone"].value;
     var carMake = document.forms["myForm"]["carMake"].value;
     var carModel = document.forms["myForm"]["carModel"].value;
     var carYear = document.forms["myForm"]["carYear"].value;
+    
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
     if (name==null || name=="") {
         alert("Name is required");
         return false;
