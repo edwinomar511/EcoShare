@@ -90,10 +90,11 @@ public class FindaRide extends HttpServlet {
 //		System.out.println(date);
 //		System.out.println(time);
 		
-		System.out.println(query);
+		
 		if(query.equals("SELECT * FROM Ride WHERE ")){
 			query = "SELECT * FROM Ride";
 		}
+		System.out.println(query);
 		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
 
 	}

@@ -57,11 +57,19 @@ public class Find extends HttpServlet {
 		else{
 			//do something here too haha...
 		}*/
-		String from= request.getParameter("date");
+		String query = "SELECT * FROM Ride WHERE ";
+		String from= request.getParameter("from");
+		if(!from.equals("From:") && !from.equals("")){
+			query = query + "from.location= " + from + " ";
+		}
 		String to = request.getParameter("to");
-		System.out.println("doPost method of Find Servlet.");
-		System.out.println(from);
-		System.out.println(to);
+		if(!to.equals("To:") && !to.equals("")){
+			query = query + "to.location= " + to + " ";
+		}
+		if(query.equals("SELECT * FROM Ride WHERE ")){
+			query = "SELECT * FROM Ride";
+		}
+		System.out.println(query);
 		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
 		
 	}
