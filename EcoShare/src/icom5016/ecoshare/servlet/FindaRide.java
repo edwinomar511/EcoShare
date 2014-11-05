@@ -83,6 +83,7 @@ public class FindaRide extends HttpServlet {
 		if(!time.equals("")){
 			query = query + "time = " + time + " ";
 		}
+		query = query + ";";
 //		System.out.println("doPost method of FindaRide Servlet.");
 //		System.out.println(from);
 //		System.out.println(to);

@@ -73,7 +73,7 @@ public class ShareaRide extends HttpServlet {
 		System.out.println("doPost method of ShareaRide Servlet.");
 		String rideID = generateRideID(email);
 		String query = "INSERT into Ride (ride_id, from_location, to_location, date, time, price, comment)"
-						+ " VALUES ('" + rideID +"','"+from+"','"+to+"',"+price+","+date+","+time+",'"+email+"','"+comments+"')";
+						+ " VALUES ('" + rideID +"','"+from+"','"+to+"',"+price+","+date+","+time+",'"+email+"','"+comments+"');";
 		System.out.println(query);
 		request.getRequestDispatcher("/Register.jsp").forward(request, response);	
 
