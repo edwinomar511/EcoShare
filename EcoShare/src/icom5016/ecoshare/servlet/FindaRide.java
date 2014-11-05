@@ -94,6 +94,8 @@ public class FindaRide extends HttpServlet {
 		if(query.equals("SELECT * FROM Ride WHERE ")){
 			query = "SELECT * FROM Ride";
 		}
+		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
+
 	}
 
 }
