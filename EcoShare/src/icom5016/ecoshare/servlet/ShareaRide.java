@@ -75,7 +75,6 @@ public class ShareaRide extends HttpServlet {
 		String query = "INSERT into Ride (ride_id, from_location, to_location, price, date, time, comment)"
 				+ " VALUES ('" + rideID +"', '"+from+"', '"+to+"', "+price+", '"+date+"', '"+time+"','"+comments+"');";
 
-		
 		if(qm.verifyUser(email)){
 			qm.ShareRide(query);
 			request.getSession().setAttribute("query", query);

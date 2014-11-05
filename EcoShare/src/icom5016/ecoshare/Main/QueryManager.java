@@ -25,7 +25,7 @@ public class QueryManager {
 			ds.setPoolProperties(p);
 			connect = ds.getConnection();
 		} catch (SQLException e) {
-			
+
 		}
 	}
 
@@ -43,7 +43,7 @@ public class QueryManager {
 	public boolean ShareRide(String query){
 		try {
 			statement = connect.createStatement();
-			resultSet = statement.executeQuery(query); 
+			statement.executeUpdate(query); 
 
 		} catch (Exception e) {
 			return false;
@@ -54,53 +54,40 @@ public class QueryManager {
 	public boolean removeRide(String rideID){
 		return false;
 	}
-	
+
 	public boolean verifyUser(String email){
-		
-		String emailCheck = "";
 		try {
 			statement = connect.createStatement();
 			resultSet = statement.executeQuery("SELECT email FROM User WHERE User.email = '" + email + "';"); 
-			try {
-				while(resultSet.next())
-				{
-					emailCheck = resultSet.getString("email");
-					
-				}
-			} catch (SQLException e) {
-				
-			}finally{
-				close();
-			}
-			
-			if(emailCheck.equals(email)){
+		
+			if(resultSet.next())
 				return true;
-			}
-			else{
+			else
 				return false;
-			}
-		} catch (Exception e) {
+			
+		}catch (Exception e){
+			close();
 			return false;
 		}
-		
 	}
 
 	public boolean addUser(String[] user){
+		//Not done
 		String query1 = "INSERT INTO User (user_id, name, email, telephone) VALUES (";
 		String query2 = "INSERT INTO Car (";
 		for(String s: user)
 			query1 = query1 + s + ", ";
-		
+
 		try {
 			statement = connect.createStatement();
-			resultSet = statement.executeQuery(query1); 
+			statement.executeUpdate(query1); 
 
 		} catch (Exception e) {
 			return false;
 		}
-		
-		
-		
+
+
+
 		try {
 			statement = connect.createStatement();
 			resultSet = statement.executeQuery(query2); 
@@ -115,17 +102,16 @@ public class QueryManager {
 		return false;
 
 	}
-		
-	public String close(){
+
+	public boolean close(){
 		try {
 			statement.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			return e.getMessage();
+			return false;
 		}
-		return "closed";		
+		return true;		
 	}
-	
+
 	private ArrayList<String[]> toList(ResultSet rs){
 		ArrayList<String[]> result = new ArrayList<String[]>();
 		String[] currentRide = new String[7];
@@ -142,12 +128,12 @@ public class QueryManager {
 				result.add(currentRide);
 			}
 		} catch (SQLException e) {
-			
+
 		}finally{
 			close();
 		}
-		
+
 		return result;
 	}
-	
+
 }
