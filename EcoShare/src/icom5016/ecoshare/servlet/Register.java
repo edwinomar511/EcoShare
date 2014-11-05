@@ -14,17 +14,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Find
+ * Servlet implementation class Register
  */
-@WebServlet(description = "Find a ride [EcoShare]", urlPatterns = { "/Find" })
-public class Find extends HttpServlet {
+@WebServlet(description = "Register [EcoShare]", urlPatterns = { "/Register" })
+public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	QueryManager qm;
     /**
      * Default constructor. 
      */
-    public Find() {
+    public Register() {
     	this.qm = new QueryManager();
     }
 
@@ -33,7 +33,7 @@ public class Find extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet method of Find Servlet.");
+		System.out.println("doGet method of Register Servlet.");
 
 	}
 
@@ -57,12 +57,22 @@ public class Find extends HttpServlet {
 		else{
 			//do something here too haha...
 		}*/
-		String from= request.getParameter("date");
-		String to = request.getParameter("to");
-		System.out.println("doPost method of Find Servlet.");
-		System.out.println(from);
-		System.out.println(to);
-		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
+		String email= request.getParameter("email");
+		String name = request.getParameter("name");
+		String phone = request.getParameter("phone");
+		String carMake = request.getParameter("carMake");
+		String carModel = request.getParameter("carModel");
+		String carYear = request.getParameter("carYear");
+		System.out.println("doPost method of Register Servlet.");
+		System.out.println(email);
+		System.out.println(name);
+		System.out.println(phone);
+		System.out.println(carMake);
+		System.out.println(carModel);
+		System.out.println(carYear);
+		
+		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
+		
 		
 	}
 

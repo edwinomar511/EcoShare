@@ -6,6 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script>
+function validateForm() {
+    var name = document.forms["myForm"]["name"].value;
+    var phone = document.forms["myForm"]["phone"].value;
+    var carMake = document.forms["myForm"]["carMake"].value;
+    var carModel = document.forms["myForm"]["carModel"].value;
+    var carYear = document.forms["myForm"]["carYear"].value;
+    if (name==null || name=="") {
+        alert("Name is required");
+        return false;
+    }
+    if (phone==null || phone=="") {
+        alert("Phone # is required");
+        return false;
+    }
+    if (carMake==null || carMake=="") {
+        alert("Car Make is required");
+        return false;
+    }
+    if (carModel==null || carModel=="") {
+        alert("Car Model is required");
+        return false;
+    }
+    if (carYear==null || carYear=="") {
+        alert("Car Year is required");
+        return false;
+    }
+}
+</script>
   <!-- Le styles -->
   <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
@@ -133,22 +162,19 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <form id="index" action="Find" method = "POST">
+        
           <h2 class="form-signin-heading">Register</h2>
-          <h3 class="form-signin-heading">If already registered, use the email associated with the account to post a ride.        </h3>
-			<p><input type="text" name="email" placeholder="Email:"></p>
-			<p><input type="text" name="name" placeholder="Name"></p>
-			<p><input type="text" name="phone" placeholder="Phone#"></p>
-			<p><input type="text" name="make" placeholder="Car Make:"></p>
-			<p><input type="text" name="model" placeholder="Car Model:"></p>
-			<p><input type="text" name="year" placeholder="Car Year:"></p>
-			<!-- <input type="submit" value="Submit" > -->
-		</form>
-<form name="form3" method="post" action="">
-        <span id="sprytextarea1"><span class="textareaRequiredMsg"> value is requir</span></span>
-        </form>
+          <form id="index" name="myForm" method="post" action="Register" onsubmit="return validateForm()">
+					<input type="text" name="email" placeholder="Email:"></br>
+					<input type="text" name="name" placeholder="Name:"></br>
+					<input type="text" name="phone" placeholder="Phone #: "></br>
+					<input type="text" name="carMake" placeholder="Car Make: "></br>
+					<input type="text" name="carModel" placeholder="Car Model: "></br>
+					<input type="number" min=0 name="carYear" placeholder="Car Year: "></br>
+    <input class="btn1 btn-large btn-success" type="submit"
+									value="Register">
+			</form>
       
-<a class="btn btn-large btn-success" href="/EcoShare/RideInformation.jsp">Register and Share</a>
       
       </div>
 
@@ -169,8 +195,5 @@
 
   </div> <!-- /container -->
 
-  <script type="text/javascript">
-var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
-  </script>
   </body>
 </html>

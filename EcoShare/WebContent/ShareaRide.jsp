@@ -6,7 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<!-- Le styles -->
+<link
+	href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+
+<!-- styles -->
 <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
@@ -153,64 +160,76 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-			<form class="form-signin" role="form">
 				<h2 class="form-signin-heading">Share a Ride</h2>
-				<p>
-				<form id="index" action="Find" method="POST">
-					<input type="text" name="from" placeholder="From:"> <input
-						type="text" name="to" placeholder="To:">
-					<!-- <input type="submit" value="Submit" > -->
-				</form>
-				</p>
-				<h2 class="form-signin-heading">Date & Time</h2>
-				<p>
-				<form name="tstest" method="post">
-					<input type="Text" name="timestamp" value=""> <a
-						href="javascript:show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);"><img
-						src="/EcoShare/cal.gif" width="16" height="16" border="0"
-						alt="Click Here to Pick up the timestamp"></a>
-				</form>
-				</p>
-				<p>&nbsp;</p>
+				<form id="index" method="post" action="ShareaRide">
+					<select id="From" name="from" onchange="return setValue();">
+						<option value="From:">From:
+						<option value="mayaguez">Mayaguez
+						<option value="caguas">Caguas
+						<option value="cidra">Cidra
+					</select> <select id="To" name="to" onchange="return setValue();">
+						<option value="To:">To:
+						<option value="mayaguez">Mayaguez
+						<option value="caguas">Caguas
+						<option value="cidra">Cidra
+					</select>
+					<div>
+					<h2>Select a Price Range:</h2>
+					<input type="number" min=0 name="minprice" placeholder="Minimum Price"> 
+					<input type="number" name="maxprice" placeholder="Maximum Price">
+					</div>
+					<h2 class="form-signin-heading">Date & Time</h2>
+
+					<div id="datetimepicker4" class="input-append">
+						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span
+							class="add-on"> <i data-time-icon="icon-time"
+							data-date-icon="icon-calendar"> </i>
+						</span>
+					</div>
+
+					<script type="text/javascript">
+						$(function() {
+							$('#datetimepicker4').datetimepicker({
+								pickTime : false
+							});
+						});
+					</script>
+
+					<div id="datetimepicker3" class="input-append">
+						<input data-format="hh:mm:ss" type="text" name="time"></input> <span
+							class="add-on"> <i data-time-icon="icon-time"
+							data-date-icon="icon-calendar"> </i>
+						</span>
+					</div>
+					<script type="text/javascript">
+						$(function() {
+							$('#datetimepicker3').datetimepicker({
+								pickDate : false,
+								pick12HourFormat : true,
+								pickSeconds : false
+							});
+						});
+					</script>
+
+
+
+
+				<input type="hidden" name="dropdown" id="dropdown">
+				
+				<br/>
+				<h2>Enter an Email:</h2>
+				<input type="text" name="email" placeholder="Enter an Email:">
+				<br/>
+				<h3>Comments:</h3>
+				<textarea name="comments" cols="40" rows="2">Please limit your response to 200 characters.</textarea>
+				
+				<div>
+					<input class="btn1 btn-large btn-success" type="submit"
+						value="Search">
+				</div>
 			</form>
+			
 
-			<form name="form2" method="post" action="">
-				<span id="sprytextfield2"> <label for="To:"></label> <span
-					class="textfieldRequiredMsg">A value i</span></span><span
-					id="sprytextfield3"> <label for="text2"></label> <span
-					class="textfieldRequiredMsg">A value is required.</span></span>
-			</form>
-
-			<form id="index" action="Find" method="POST">
-				<input type="text" name="price" placeholder="Price">
-				<!-- <input type="submit" value="Submit" > -->
-			</form>
-			<form name="form3" method="post" action="">
-				<strong><span id="sprytextarea1"> <label
-						for="Additional Comments:">Additional Comments:</label>
-				</span></strong>
-				<p>
-					<span id="sprytextarea1"> <textarea
-							name="Additional Comments:" id="Additional Comments:" cols="45"
-							rows="5"></textarea> <span class="textareaRequiredMsg">A
-							value is required.</span></span>
-				</p>
-				<p>
-				<form id="index" action="Find" method="POST">
-					<input type="text" name="email" placeholder="Enter an Email:">
-					<!-- <input type="submit" value="Submit" > -->
-				</form>
-				</p>
-
-				<p>&nbsp;</p>
-			</form>
-
-			<p>
-				<a href="/EcoShare/Register.jsp" target="_parent"><button
-						class="btnset btn-lg btn-success" type="submit">Share
-						Ride</button></a>
-
-			</p>
 		</div>
 
 		<!-- Example row of columns -->
@@ -229,13 +248,23 @@ body {
 
 	</div>
 	<!-- /container -->
-
+<script type="text/javascript"
+		src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+	<script type="text/javascript"
+		src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+	<script type="text/javascript"
+		src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+	<script type="text/javascript"
+		src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
 	<script type="text/javascript">
-		var sprytextfield2 = new Spry.Widget.ValidationTextField(
-				"sprytextfield2");
-		var sprytextfield3 = new Spry.Widget.ValidationTextField(
-				"sprytextfield3");
-		var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
-	</script>
+      $('#datetimepicker').datetimepicker({
+        format: 'dd/MM/yyyy hh:mm:ss',
+        language: 'en-US'
+      });
+    </script>
 </body>
 </html>

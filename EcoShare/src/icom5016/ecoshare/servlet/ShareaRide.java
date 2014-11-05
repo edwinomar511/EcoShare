@@ -14,17 +14,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Find
+ * Servlet implementation class ShareaRide
  */
-@WebServlet(description = "Find a ride [EcoShare]", urlPatterns = { "/Find" })
-public class Find extends HttpServlet {
+@WebServlet(description = "Share a ride [EcoShare]", urlPatterns = { "/ShareaRide" })
+public class ShareaRide extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	QueryManager qm;
     /**
      * Default constructor. 
      */
-    public Find() {
+    public ShareaRide() {
     	this.qm = new QueryManager();
     }
 
@@ -33,7 +33,7 @@ public class Find extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet method of Find Servlet.");
+		System.out.println("doGet method of ShareaRide Servlet.");
 
 	}
 
@@ -57,13 +57,30 @@ public class Find extends HttpServlet {
 		else{
 			//do something here too haha...
 		}*/
-		String from= request.getParameter("date");
+		String from= request.getParameter("from");
 		String to = request.getParameter("to");
-		System.out.println("doPost method of Find Servlet.");
+		String minprice = request.getParameter("minprice");
+		String maxprice = request.getParameter("maxprice");
+		String date = request.getParameter("date");
+		String time = request.getParameter("time");
+		String email = request.getParameter("email");
+		String comments = request.getParameter("comments");
+		System.out.println("doPost method of ShareaRide Servlet.");
 		System.out.println(from);
 		System.out.println(to);
-		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
+		System.out.println("Price from: $"+minprice+" to: $"+maxprice);
+		System.out.println(date);
+		System.out.println(time);
+		System.out.println(email);
+		System.out.println(comments);
+		if(email == ""){
+			request.getRequestDispatcher("/Register.jsp").forward(request, response);	
+
+		}
+		else{
+		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
 		
+		}
 	}
 
 }

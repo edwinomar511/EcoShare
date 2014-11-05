@@ -14,17 +14,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Find
+ * Servlet implementation class FindaRide
  */
-@WebServlet(description = "Find a ride [EcoShare]", urlPatterns = { "/Find" })
-public class Find extends HttpServlet {
+@WebServlet(description = "Find a ride [EcoShare]", urlPatterns = { "/FindaRide" })
+public class FindaRide extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	QueryManager qm;
     /**
      * Default constructor. 
      */
-    public Find() {
+    public FindaRide() {
     	this.qm = new QueryManager();
     }
 
@@ -33,7 +33,7 @@ public class Find extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("doGet method of Find Servlet.");
+		System.out.println("doGet method of FindaRide Servlet.");
 
 	}
 
@@ -57,13 +57,43 @@ public class Find extends HttpServlet {
 		else{
 			//do something here too haha...
 		}*/
-		String from= request.getParameter("date");
-		String to = request.getParameter("to");
-		System.out.println("doPost method of Find Servlet.");
-		System.out.println(from);
-		System.out.println(to);
-		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
 		
+		String query = "SELECT * FROM Ride WHERE ";
+		String from= request.getParameter("from");
+		if(!from.equals("From:") && !from.equals("")){
+			query = query + "from.location= " + from + " ";
+		}
+		String to = request.getParameter("to");
+		if(!to.equals("To:") && !to.equals("")){
+			query = query + "to.location= " + to + " ";
+		}
+		String minprice = request.getParameter("minprice");
+		if(!minprice.equals("")){
+			query = query + "price >= " + minprice + " ";
+		}
+		String maxprice = request.getParameter("maxprice");
+		if(!maxprice.equals("")){
+			query = query + "price <= " + maxprice + " ";
+		}
+		String date = request.getParameter("date");
+		if(!date.equals("")){
+			query = query + "date = " + date + " ";
+		}
+		String time = request.getParameter("time");
+		if(!time.equals("")){
+			query = query + "time = " + time + " ";
+		}
+//		System.out.println("doPost method of FindaRide Servlet.");
+//		System.out.println(from);
+//		System.out.println(to);
+//		System.out.println("Price from: $"+minprice+" to: $"+maxprice);
+//		System.out.println(date);
+//		System.out.println(time);
+		
+		System.out.println(query);
+		if(query.equals("SELECT * FROM Ride WHERE ")){
+			query = "SELECT * FROM Ride";
+		}
 	}
 
 }
