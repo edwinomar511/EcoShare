@@ -61,11 +61,11 @@ public class FindaRide extends HttpServlet {
 		String query = "SELECT * FROM Ride WHERE ";
 		String from= request.getParameter("from");
 		if(!from.equals("From:") && !from.equals("")){
-			query = query + "from.location= " + from + " ";
+			query = query + "from_location= '" + from + "' AND ";
 		}
 		String to = request.getParameter("to");
 		if(!to.equals("To:") && !to.equals("")){
-			query = query + "to.location= " + to + " ";
+			query = query + "to_location= '" + to + "' AND ";
 		}
 		String minprice = request.getParameter("minprice");
 		if(!minprice.equals("")){
@@ -73,17 +73,17 @@ public class FindaRide extends HttpServlet {
 		}
 		String maxprice = request.getParameter("maxprice");
 		if(!maxprice.equals("")){
-			query = query + "price <= " + maxprice + " ";
+			query = query + "price <= " + maxprice + " AND ";
 		}
 		String date = request.getParameter("date");
 		if(!date.equals("")){
-			query = query + "date = " + date + " ";
+			query = query + "date = '" + date + "' AND ";
 		}
 		String time = request.getParameter("time");
 		if(!time.equals("")){
-			query = query + "time = " + time + " ";
+			query = query + "time = '" + time + "' AND ";
 		}
-		query = query + ";";
+
 //		System.out.println("doPost method of FindaRide Servlet.");
 //		System.out.println(from);
 //		System.out.println(to);
@@ -95,7 +95,10 @@ public class FindaRide extends HttpServlet {
 		if(query.equals("SELECT * FROM Ride WHERE ")){
 			query = "SELECT * FROM Ride";
 		}
-		System.out.println(query);
+		query = query.substring(0, query.length()-4);
+		query = query + ";";
+		
+		System.out.println(query + qm.findRide(query).get(0).toString());
 		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);	
 
 	}

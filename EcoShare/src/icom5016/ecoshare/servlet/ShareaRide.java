@@ -22,12 +22,12 @@ public class ShareaRide extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	QueryManager qm;
-    /**
-     * Default constructor. 
-     */
-    public ShareaRide() {
-    	this.qm = new QueryManager();
-    }
+	/**
+	 * Default constructor. 
+	 */
+	public ShareaRide() {
+		this.qm = new QueryManager();
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -47,11 +47,11 @@ public class ShareaRide extends HttpServlet {
 		Time time = Time.valueOf(request.getParameter("time"));
 		Date date = Date.valueOf(request.getParameter("date"));
 		String price = request.getParameter("price");
-		
+
 		String query = "SELECT * FROM Ride WHERE Ride.from_location = " + from + "";
-		
+
 		ResultSet result = qm.findRide(query);
-		
+
 		if(result.equals(null)){
 			//do something here
 		}
@@ -65,20 +65,26 @@ public class ShareaRide extends HttpServlet {
 		String time = request.getParameter("time");
 		String email = request.getParameter("email");
 		String comments = request.getParameter("comments");
-		
+
 		if(comments.equals("Please limit your response to 200 characters.")){
 			comments = "No Comments";
 		}
-		
+
 		System.out.println("doPost method of ShareaRide Servlet.");
 		String rideID = generateRideID(email);
-		String query = "INSERT into Ride (ride_id, from_location, to_location, date, time, price, comment)"
-						+ " VALUES ('" + rideID +"','"+from+"','"+to+"',"+price+","+date+","+time+",'"+email+"','"+comments+"');";
+		String query = "INSERT into Ride (ride_id, from_location, to_location, price, date, time, comment)"
+				+ " VALUES ('" + rideID +"', '"+from+"', '"+to+"', "+price+", '"+date+"', '"+time+"','"+comments+"');";
 		System.out.println(query);
-		request.getRequestDispatcher("/Register.jsp").forward(request, response);	
+		if(qm.ShareRide(query, rideID, email)){
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
+		}
+		else{
+			request.getRequestDispatcher("/About.jsp").forward(request, response);
+		}
+		//request.getRequestDispatcher("/Register.jsp").forward(request, response);	
 
 	}
-	
+
 	private String generateRideID(String email){
 		if(email.equals("")){
 			email = "def";
@@ -86,8 +92,8 @@ public class ShareaRide extends HttpServlet {
 		String number = Long.toString(System.currentTimeMillis());
 		String rideID = email.substring(0,2) + number.substring(number.length()-7, number.length()-1);
 		return rideID;
-		
-	
+
+
 	}
 
 }

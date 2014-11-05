@@ -41,9 +41,9 @@ public class QueryManager {
 	}
 
 	public boolean ShareRide(String query, String rideID, String email){
-		String share = "INSERT INTO share (ride_id, user_id) VALUES ('" + rideID + "', '";
+		String share = "INSERT INTO Share (ride_id, user_id) VALUES ('" + rideID + "', '";
 		ResultSet rs = null;
-		try {
+		/*try {
 			statement = connect.createStatement();
 			rs = statement.executeQuery("SELECT user_id FROM User WHERE User.email == " + email + ";");
 			if(rs.next())
@@ -56,11 +56,14 @@ public class QueryManager {
 			
 		} catch (Exception e) {
 			return false;
-		}	
+		}	*/
 		
 		try {
+			//statement = connect.createStatement();
+			//statement.executeQuery(share);
+			System.out.println(query);
 			statement = connect.createStatement();
-			resultSet = statement.executeQuery(share); 
+			statement.executeUpdate(query); 
 
 		} catch (Exception e) {
 			return false;
