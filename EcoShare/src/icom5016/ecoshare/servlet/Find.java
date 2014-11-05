@@ -41,22 +41,6 @@ public class Find extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		/*String from = request.getParameter("from");
-		String to = request.getParameter("to");
-		Time time = Time.valueOf(request.getParameter("time"));
-		Date date = Date.valueOf(request.getParameter("date"));
-		String price = request.getParameter("price");
-		
-		String query = "SELECT * FROM Ride WHERE Ride.from_location = " + from + "";
-		
-		ResultSet result = qm.findRide(query);
-		
-		if(result.equals(null)){
-			//do something here
-		}
-		else{
-			//do something here too haha...
-		}*/
 		String query = "SELECT * FROM Ride WHERE ";
 		String from= request.getParameter("from");
 		if(!from.equals("From:") && !from.equals("")){
