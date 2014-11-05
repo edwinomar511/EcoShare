@@ -69,7 +69,7 @@ public class FindaRide extends HttpServlet {
 		}
 		String minprice = request.getParameter("minprice");
 		if(!minprice.equals("")){
-			query = query + "price >= " + minprice + " ";
+			query = query + "price >= " + minprice + " AND ";
 		}
 		String maxprice = request.getParameter("maxprice");
 		if(!maxprice.equals("")){

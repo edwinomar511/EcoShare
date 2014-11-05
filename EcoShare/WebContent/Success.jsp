@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>EcoShare - Ride Information</title>
+  <title>EcoShare - Success</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -135,13 +135,8 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-          <h2 class="form-signin-heading">Ride Information        </h2>
-
-	<h3>RideID: ${rideID} </h3>
- 		<h3>Ride: ${ride} </h3>
- 
- 
- 
+          <h2 class="form-signin-heading">You have shared a ride!!!       </h2>
+          <h3>Query: ${query} </h3>
  
  
       </div>

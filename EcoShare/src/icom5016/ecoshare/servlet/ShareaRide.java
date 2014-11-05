@@ -74,14 +74,17 @@ public class ShareaRide extends HttpServlet {
 		String rideID = generateRideID(email);
 		String query = "INSERT into Ride (ride_id, from_location, to_location, price, date, time, comment)"
 				+ " VALUES ('" + rideID +"', '"+from+"', '"+to+"', "+price+", '"+date+"', '"+time+"','"+comments+"');";
-		System.out.println(query);
-		if(qm.ShareRide(query, rideID, email)){
-			request.getRequestDispatcher("/index.jsp").forward(request, response);
+
+		
+		if(qm.verifyUser(email)){
+			qm.ShareRide(query);
 		}
 		else{
-			request.getRequestDispatcher("/About.jsp").forward(request, response);
+			request.getRequestDispatcher("/Register.jsp").forward(request, response);
 		}
-		//request.getRequestDispatcher("/Register.jsp").forward(request, response);	
+		
+		request.getSession().setAttribute("query", query);
+		request.getRequestDispatcher("/Success.jsp").forward(request, response);
 
 	}
 

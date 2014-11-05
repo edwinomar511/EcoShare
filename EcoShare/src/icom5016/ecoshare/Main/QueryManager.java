@@ -40,30 +40,10 @@ public class QueryManager {
 		return toList(resultSet);
 	}
 
-	public boolean ShareRide(String query, String rideID, String email){
-		String share = "INSERT INTO Share (ride_id, user_id) VALUES ('" + rideID + "', '";
-		ResultSet rs = null;
-		/*try {
-			statement = connect.createStatement();
-			rs = statement.executeQuery("SELECT user_id FROM User WHERE User.email == " + email + ";");
-			if(rs.next())
-			{
-				share = share + rs.getString("user_id") + "');";
-			}
-			else{
-				return false;
-			}
-			
-		} catch (Exception e) {
-			return false;
-		}	*/
-		
+	public boolean ShareRide(String query){
 		try {
-			//statement = connect.createStatement();
-			//statement.executeQuery(share);
-			System.out.println(query);
 			statement = connect.createStatement();
-			statement.executeUpdate(query); 
+			resultSet = statement.executeQuery(query); 
 
 		} catch (Exception e) {
 			return false;
@@ -76,14 +56,33 @@ public class QueryManager {
 	}
 	
 	public boolean verifyUser(String email){
+		
+		String emailCheck = "";
 		try {
 			statement = connect.createStatement();
-			resultSet = statement.executeQuery("SELECT * FROM User WHERE User.email == '" + email + "';"); 
-
+			resultSet = statement.executeQuery("SELECT email FROM User WHERE User.email = '" + email + "';"); 
+			try {
+				while(resultSet.next())
+				{
+					emailCheck = resultSet.getString("email");
+					
+				}
+			} catch (SQLException e) {
+				
+			}finally{
+				close();
+			}
+			
+			if(emailCheck.equals(email)){
+				return true;
+			}
+			else{
+				return false;
+			}
 		} catch (Exception e) {
 			return false;
-		}	
-		return true;
+		}
+		
 	}
 
 	public boolean addUser(String[] user){
@@ -150,4 +149,5 @@ public class QueryManager {
 		
 		return result;
 	}
+	
 }

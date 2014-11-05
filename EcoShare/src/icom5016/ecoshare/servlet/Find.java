@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Time;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,17 +45,29 @@ public class Find extends HttpServlet {
 		String query = "SELECT * FROM Ride WHERE ";
 		String from= request.getParameter("from");
 		if(!from.equals("From:") && !from.equals("")){
-			query = query + "from.location= " + from + " ";
+			query = query + "from_location= '" + from + "' AND ";
 		}
 		String to = request.getParameter("to");
 		if(!to.equals("To:") && !to.equals("")){
-			query = query + "to.location= " + to + " ";
+			query = query + "to_location= '" + to + "' AND ";
 		}
 		if(query.equals("SELECT * FROM Ride WHERE ")){
 			query = "SELECT * FROM Ride";
 		}
-		System.out.println(query);
-		request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
+		
+		query = query.substring(0, query.length()-4);
+		query = query + ";";
+		
+		ArrayList<String[]> rides = qm.findRide(query);
+		String[] ride = rides.get(0);
+		String rideid = ride[0];
+		
+		request.getSession().setAttribute("rideID", rideid);
+		request.getSession().setAttribute("ride", query);
+		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);
+		return;
+		
+		//request.getRequestDispatcher("/FindaRide.jsp").forward(request, response);	
 		
 	}
 
