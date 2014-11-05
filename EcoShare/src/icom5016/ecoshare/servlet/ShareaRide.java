@@ -78,13 +78,14 @@ public class ShareaRide extends HttpServlet {
 		
 		if(qm.verifyUser(email)){
 			qm.ShareRide(query);
+			request.getSession().setAttribute("query", query);
+			request.getRequestDispatcher("/Success.jsp").forward(request, response);
 		}
 		else{
 			request.getRequestDispatcher("/Register.jsp").forward(request, response);
 		}
 		
-		request.getSession().setAttribute("query", query);
-		request.getRequestDispatcher("/Success.jsp").forward(request, response);
+		
 
 	}
 
