@@ -11,7 +11,6 @@ public class QueryManager {
 	private Connection connect = null;
 	private Statement statement = null;
 	private ResultSet resultSet = null;
-	private String status = null;
 
 	public QueryManager(){
 		DataSource ds = new DataSource();
@@ -30,7 +29,7 @@ public class QueryManager {
 		}
 	}
 
-	public ResultSet findRide(String query){	 
+	public ArrayList<String[]> findRide(String query){	 
 		try {
 			statement = connect.createStatement();
 			resultSet = statement.executeQuery(query); 
@@ -38,33 +37,83 @@ public class QueryManager {
 		} catch (Exception e) {
 			return null;
 		}
-		return resultSet;
+		return toList(resultSet);
 	}
 
-	public boolean addRide(String[] ride){
-		return false;	
+	public boolean ShareRide(String query, String rideID, String email){
+		String share = "INSERT INTO share (ride_id, user_id) VALUES ('" + rideID + "', '";
+		ResultSet rs = null;
+		try {
+			statement = connect.createStatement();
+			rs = statement.executeQuery("SELECT user_id FROM User WHERE User.email == " + email + ";");
+			if(rs.next())
+			{
+				share = share + rs.getString("user_id") + "');";
+			}
+			else{
+				return false;
+			}
+			
+		} catch (Exception e) {
+			return false;
+		}	
+		
+		try {
+			statement = connect.createStatement();
+			resultSet = statement.executeQuery(share); 
+
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
 	}
 
 	public boolean removeRide(String rideID){
 		return false;
 	}
+	
+	public boolean verifyUser(String email){
+		try {
+			statement = connect.createStatement();
+			resultSet = statement.executeQuery("SELECT * FROM User WHERE User.email == '" + email + "';"); 
+
+		} catch (Exception e) {
+			return false;
+		}	
+		return true;
+	}
 
 	public boolean addUser(String[] user){
-		return false;
+		String query1 = "INSERT INTO User (user_id, name, email, telephone) VALUES (";
+		String query2 = "INSERT INTO Car (";
+		for(String s: user)
+			query1 = query1 + s + ", ";
+		
+		try {
+			statement = connect.createStatement();
+			resultSet = statement.executeQuery(query1); 
 
+		} catch (Exception e) {
+			return false;
+		}
+		
+		
+		
+		try {
+			statement = connect.createStatement();
+			resultSet = statement.executeQuery(query2); 
+
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
 	}
 
 	public boolean removeUser(String userID){
 		return false;
 
 	}
-
-	public String getStatus() {
-		return status;
-
-	}
-	
-	
+		
 	public String close(){
 		try {
 			statement.close();
@@ -72,8 +121,7 @@ public class QueryManager {
 			// TODO Auto-generated catch block
 			return e.getMessage();
 		}
-		return "closed";
-		
+		return "closed";		
 	}
 	
 	private ArrayList<String[]> toList(ResultSet rs){
@@ -93,7 +141,10 @@ public class QueryManager {
 			}
 		} catch (SQLException e) {
 			
-		}		
+		}finally{
+			close();
+		}
+		
 		return result;
 	}
 }
