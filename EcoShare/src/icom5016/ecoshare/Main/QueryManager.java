@@ -40,7 +40,7 @@ public class QueryManager {
 		return toList(resultSet);
 	}
 
-	public boolean ShareRide(String query){
+	public boolean updateQuery(String query){
 		try {
 			statement = connect.createStatement();
 			statement.executeUpdate(query); 
@@ -71,33 +71,7 @@ public class QueryManager {
 		}
 	}
 
-	public boolean addUser(String[] user){
-		//Not done
-		String query1 = "INSERT INTO User (user_id, name, email, telephone) VALUES (";
-		String query2 = "INSERT INTO Car (";
-		for(String s: user)
-			query1 = query1 + s + ", ";
-
-		try {
-			statement = connect.createStatement();
-			statement.executeUpdate(query1); 
-
-		} catch (Exception e) {
-			return false;
-		}
-
-
-
-		try {
-			statement = connect.createStatement();
-			resultSet = statement.executeQuery(query2); 
-
-		} catch (Exception e) {
-			return false;
-		}
-		return true;
-	}
-
+	
 	public boolean removeUser(String userID){
 		return false;
 

@@ -76,7 +76,7 @@ public class ShareaRide extends HttpServlet {
 				+ " VALUES ('" + rideID +"', '"+from+"', '"+to+"', "+price+", '"+date+"', '"+time+"','"+comments+"');";
 
 		if(qm.verifyUser(email)){
-			qm.ShareRide(query);
+			qm.updateQuery(query);
 			request.getSession().setAttribute("query", query);
 			request.getRequestDispatcher("/Success.jsp").forward(request, response);
 		}
