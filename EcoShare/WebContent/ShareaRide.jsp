@@ -11,7 +11,33 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen"
 	href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+<script>
+function validateForm() {
+    var from = document.forms["myForm"]["from"].value;
+    var to = document.forms["myForm"]["to"].value;
+    var price = document.forms["myForm"]["price"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var atpos = email.indexOf("@");
+    var dotpos = email.lastIndexOf(".");
+    if (from==null || from =="" || from.equals("From:")) {
+        alert("Select From: Location");
+        return false;
+    }
+    if (to == null || to == "" || !to.equals("To:")) {
+        alert("Select To: Location");
+        return false;
+    }
+    if (price == null || price == "") {
+        alert("Enter a Price");
+        return false;
+    }
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
 
+}
+</script>
 
 <!-- styles -->
 <link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -161,7 +187,7 @@ body {
 		<!-- Jumbotron -->
 		<div class="jumbotron">
 				<h2 class="form-signin-heading">Share a Ride</h2>
-				<form id="index" method="post" action="ShareaRide">
+				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
 						<option value="mayaguez">Mayaguez
@@ -174,9 +200,8 @@ body {
 						<option value="cidra">Cidra
 					</select>
 					<div>
-					<h2>Select a Price Range:</h2>
-					<input type="number" min=0 name="minprice" placeholder="Minimum Price"> 
-					<input type="number" name="maxprice" placeholder="Maximum Price">
+					<h2>Select a Price for Your Ride:</h2>
+					<input type="number" min=0 name="price" placeholder="Price"> 
 					</div>
 					<h2 class="form-signin-heading">Date & Time</h2>
 
