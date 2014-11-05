@@ -160,7 +160,7 @@ body {
 		<!-- Jumbotron -->
 		<div class="jumbotron">
 			
-				<h2>Find a Ride</h2>
+				<img src="/EcoShare/FindaRide.png" width="279" height="52" align="absmiddle"></br>
 				<form id="index" method="post" action="FindaRide">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
@@ -174,11 +174,11 @@ body {
 						<option value="cidra">Cidra
 					</select>
 					<div>
-					<h2>Select a Price Range:</h2>
+					<img src="/EcoShare/SelectPrice.png" width="279" height="52" align="absmiddle"></br>
 					<input type="number" min=0 name="minprice" placeholder="Minimum Price"> 
 					<input type="number" name="maxprice" placeholder="Maximum Price">
 					</div>
-					<h2 class="form-signin-heading">Date & Time</h2>
+					<img src="/EcoShare/Date&Time.png" width="279" height="52" align="absmiddle"></br>
 
 					<div id="datetimepicker4" class="input-append">
 						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span

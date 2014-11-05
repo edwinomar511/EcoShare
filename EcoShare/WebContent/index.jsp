@@ -208,6 +208,9 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
+		
+		<img src="/EcoShare/FindaRide.png" width="279" height="52" align="absmiddle"></br>
+		
 			<form id="index" method="post" action="Find">
 				<select id="From" name="from" onchange="return setValue();">
 					<option value="From:">From:
