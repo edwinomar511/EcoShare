@@ -40,7 +40,7 @@ function validateForm() {
 </script>
 
 <!-- styles -->
-<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/EcoShare/bootstrap/css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
 	padding-top: 20px;
@@ -132,7 +132,7 @@ body {
 	color: #2d525d !important;
 }
 </style>
-<link href="/bootstrap/css/bootstrap-responsive.css"
+<link href="/EcoShare/bootstrap/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -140,24 +140,24 @@ body {
     <![endif]-->
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="/bootstrap/ico/apple-touch-icon-144-precomposed.png">
+	href="/EcoShare/bootstrap/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="/bootstrap/ico/apple-touch-icon-114-precomposed.png">
+	href="/EcoShare/bootstrap/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="/bootstrap/ico/apple-touch-icon-72-precomposed.png">
+	href="/EcoShare/bootstrap/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
-	href="/bootstrap/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="/bootstrap/ico/favicon.png">
+	href="/EcoShare/bootstrap/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="/EcoShare/bootstrap/ico/favicon.png">
 <script type="text/javascript"
-	src="/ScriptLibrary/jquery-latest.pack.js"></script>
-<script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
-<script src="/SpryAssets/SpryValidationTextField.js"
+	src="/EcoShare/ScriptLibrary/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="/EcoShare/bootstrap/js/bootstrap.js"></script>
+<script src="/EcoShare/SpryAssets/SpryValidationTextField.js"
 	type="text/javascript"></script>
-<script src="/SpryAssets/SpryValidationTextarea.js"
+<script src="/EcoShare/SpryAssets/SpryValidationTextarea.js"
 	type="text/javascript"></script>
-<link href="/SpryAssets/SpryValidationTextField.css"
+<link href="/EcoShare/SpryAssets/SpryValidationTextField.css"
 	rel="stylesheet" type="text/css">
-<link href="/SpryAssets/SpryValidationTextarea.css"
+<link href="/EcoShare/SpryAssets/SpryValidationTextarea.css"
 	rel="stylesheet" type="text/css">
 </head>
 
@@ -166,16 +166,16 @@ body {
 	<div class="container">
 
 		<div class="masthead">
-			<a href="/index.jsp"> <img
-				src="_title.png" width="844" height="207"
+			<a href="/EcoShare/index.jsp"> <img
+				src="/EcoShare/EcoShare_title.png" width="844" height="207"
 				align="absmiddle">
 			</a>
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li><a href="/index.jsp">Find a Ride</a></li>
-							<li class="active"><a href="/ShareaRide.jsp">Share
+							<li><a href="/EcoShare/index.jsp">Find a Ride</a></li>
+							<li class="active"><a href="/EcoShare/ShareaRide.jsp">Share
 									a Ride</a></li>
 						</ul>
 					</div>
@@ -186,7 +186,7 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-				<img src="/sharearide.png" width="279" height="52" align="absmiddle">
+				<h2 class="form-signin-heading">Share a Ride</h2>
 				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
@@ -200,11 +200,10 @@ body {
 						<option value="cidra">Cidra
 					</select>
 					<div>
-					
-					<img src="/SelectPrice.png" width="279" height="52" align="absmiddle"></br>
+					<h2>Select a Price for Your Ride:</h2>
 					<input type="number" min=0 name="price" placeholder="Price"> 
 					</div>
-					<img src="/Date&Time.png" width="279" height="52" align="absmiddle"></br>
+					<h2 class="form-signin-heading">Date & Time</h2>
 
 					<div id="datetimepicker4" class="input-append">
 						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span
@@ -243,15 +242,15 @@ body {
 				<input type="hidden" name="dropdown" id="dropdown">
 				
 				<br/>
-				<img src="/email.png" width="279" height="52" align="absmiddle"></br>
+				<h2>Enter an Email:</h2>
 				<input type="text" name="email" placeholder="Enter an Email:">
 				<br/>
-				<img src="/Comments.png" width="279" height="52" align="absmiddle"></br>
+				<h3>Comments:</h3>
 				<textarea name="comments" cols="40" rows="2">Please limit your response to 200 characters.</textarea>
 				
 				<div>
 					<input class="btn1 btn-large btn-success" type="submit"
-						value="Share">
+						value="Search">
 				</div>
 			</form>
 			
