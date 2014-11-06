@@ -186,7 +186,8 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-<img src="/EcoShare/ShareaRide.png" width="279" height="52" align="absmiddle"></br>				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
+	<img src="/EcoShare/ShareaRide.png" width="279" height="52" align="absmiddle"></br>
+				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
 						<option value="mayaguez">Mayaguez
@@ -199,10 +200,10 @@ body {
 						<option value="cidra">Cidra
 					</select>
 					<div>
-					<h2>Selec<img src="/EcoShare/SelectPrice.png" width="279" height="52" align="absmiddle"></br>t a Price for Your Ride:</h2>
+					<img src="/EcoShare/SelectPrice.png" width="279" height="52" align="absmiddle"></br>
 					<input type="number" min=0 name="price" placeholder="Price"> 
 					</div>
-<img src="/EcoShare/Date&Time.png" width="279" height="52" align="absmiddle"></br>
+				<img src="/EcoShare/Date&Time.png" width="279" height="52" align="absmiddle"></br>
 					<div id="datetimepicker4" class="input-append">
 						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span
 							class="add-on"> <i data-time-icon="icon-time"
