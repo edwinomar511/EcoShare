@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+<meta charset="utf-8">
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -156,8 +156,8 @@ body {
 				<div class="navbar-inner">
 					<div class="container">
 						<ul class="nav">
-							<li class="active"><a href="/EcoShare/index.jsp">Find a
-									Ride</a></li>
+							<li class="active"><a href="/EcoShare/FindaRide.jsp">Find
+									a Ride</a></li>
 							<li><a href="/EcoShare/ShareaRide.jsp">Share a Ride</a></li>
 						</ul>
 					</div>
@@ -168,183 +168,182 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-		<img src="/EcoShare/FindaRide.png" width="279" height="52" align="absmiddle"></br>
+			<img src="/EcoShare/FindaRide.png" width="279" height="52"
+				align="absmiddle"></br>
 			<form id="index" method="post" action="Find">
 				<select id="From" name="from" onchange="return setValue();">
-						<option value="From:">From:
-						<option value="Adjuntas">Adjuntas
-						<option value="Aguada">Aguada
-						<option value="Aguadilla">Aguadilla
-						<option value="Aguas Buenas">Aguas Buenas
-						<option value="Aibonito">Aibonito
-						<option value="Añasco">Añasco
-						<option value="Arecibo">Arecibo
-						<option value="Arroyo">Arroyo
-						<option value="Barceloneta">Barceloneta
-						<option value="Barranquitas">Barranquitas
-						<option value="Bayamon">Bayamon
-						<option value="Cabo Rojo">Cabo Rojo
-						<option value="Caguas">Caguas
-						<option value="Camuy">Camuy
-						<option value="Canovanas">Canovanas
-						<option value="Carolina">Carolina
-						<option value="Cataño">Cataño
-						<option value="Cayey">Cayey
-						<option value="Ceiba">Ceiba
-						<option value="Ciales">Ciales
-						<option value="Cidra">Cidra
-						<option value="Coamo">Coamo
-						<option value="Comerio">Comerio
-						<option value="Corozal">Corozal
-						<option value="Culebra">Culebra
-						<option value="Dorado">Dorado
-						<option value="Fajardo">Fajardo
-						<option value="Florida">Florida
-						<option value="Guanica">Guanica
-						<option value="Guayama">Guayama
-						<option value="Guayanilla">Guayanilla
-						<option value="Guaynabo">Guaynabo
-						<option value="Gurabo">Gurabo
-						<option value="Hatillo">Hatillo
-						<option value="Hormigueros">Hormigueros
-						<option value="Humacao">Humacao
-						<option value="Isabela">Isabela
-						<option value="Jayuya">Jayuya
-						<option value="Juana Diaz">Juana Diaz
-						<option value="Juncos">Juncos
-						<option value="Lajas">Lajas
-						<option value="Lares">Lares
-						<option value="Las Marias">Las Marias
-						<option value="Las Piedras">Las Piedras
-						<option value="Loiza">Loiza
-						<option value="Luquillo">Luquillo
-						<option value="Manati">Manati
-						<option value="Maricao">Maricao
-						<option value="Maunabo">Maunabo
-						<option value="Mayaguez">Mayaguez
-						<option value="Moca">Moca
-						<option value="Morovis">Morovis
-						<option value="Naguabo">Naguabo
-						<option value="Naranjito">Naranjito
-						<option value="Orocovis">Orocovis
-						<option value="Patillas">Patillas
-						<option value="Peñuelas">Peñuelas
-						<option value="Ponce">Ponce
-						<option value="Quebradillas">Quebradillas
-						<option value="Rincón">Rincón
-						<option value="Rio Grande">Rio Grande
-						<option value="Sabana Grande">Sabana Grande
-						<option value="Salinas">Salinas
-						<option value="San German">San German
-						<option value="San Juan">San Juan
-						<option value="San Lorenzo">San Lorenzo
-						<option value="San Sebastian">San Sebastian
-						<option value="Santa Isabel">Santa Isabel
-						<option value="Toa Alta">Toa Alta
-						<option value="Toa Baja">Toa Baja
-						<option value="Trujillo Alto">Trujillo Alto
-						<option value="Utuado">Utuado
-						<option value="Vega Baja">Vega Baja
-						<option value="Vega Alta">Vega Alta
-						<option value="Vieques">Vieques
-						<option value="Villalba">Villalba
-						<option value="Yabucoa">Yabucoa
-						<option value="Yauco">Yauco
-					</select> <select id="To" name="to" onchange="return setValue();">
-						<option value="To:">To:
-						<option value="Adjuntas">Adjuntas
-						<option value="Aguada">Aguada
-						<option value="Aguadilla">Aguadilla
-						<option value="Aguas Buenas">Aguas Buenas
-						<option value="Aibonito">Aibonito
-						<option value="Añasco">Añasco
-						<option value="Arecibo">Arecibo
-						<option value="Arroyo">Arroyo
-						<option value="Barceloneta">Barceloneta
-						<option value="Barranquitas">Barranquitas
-						<option value="Bayamon">Bayamon
-						<option value="Cabo Rojo">Cabo Rojo
-						<option value="Caguas">Caguas
-						<option value="Camuy">Camuy
-						<option value="Canovanas">Canovanas
-						<option value="Carolina">Carolina
-						<option value="Cataño">Cataño
-						<option value="Cayey">Cayey
-						<option value="Ceiba">Ceiba
-						<option value="Ciales">Ciales
-						<option value="Cidra">Cidra
-						<option value="Coamo">Coamo
-						<option value="Comerio">Comerio
-						<option value="Corozal">Corozal
-						<option value="Culebra">Culebra
-						<option value="Dorado">Dorado
-						<option value="Fajardo">Fajardo
-						<option value="Florida">Florida
-						<option value="Guanica">Guanica
-						<option value="Guayama">Guayama
-						<option value="Guayanilla">Guayanilla
-						<option value="Guaynabo">Guaynabo
-						<option value="Gurabo">Gurabo
-						<option value="Hatillo">Hatillo
-						<option value="Hormigueros">Hormigueros
-						<option value="Humacao">Humacao
-						<option value="Isabela">Isabela
-						<option value="Jayuya">Jayuya
-						<option value="Juana Diaz">Juana Diaz
-						<option value="Juncos">Juncos
-						<option value="Lajas">Lajas
-						<option value="Lares">Lares
-						<option value="Las Marias">Las Marias
-						<option value="Las Piedras">Las Piedras
-						<option value="Loiza">Loiza
-						<option value="Luquillo">Luquillo
-						<option value="Manati">Manati
-						<option value="Maricao">Maricao
-						<option value="Maunabo">Maunabo
-						<option value="Mayaguez">Mayaguez
-						<option value="Moca">Moca
-						<option value="Morovis">Morovis
-						<option value="Naguabo">Naguabo
-						<option value="Naranjito">Naranjito
-						<option value="Orocovis">Orocovis
-						<option value="Patillas">Patillas
-						<option value="Peñuelas">Peñuelas
-						<option value="Ponce">Ponce
-						<option value="Quebradillas">Quebradillas
-						<option value="Rincón">Rincón
-						<option value="Rio Grande">Rio Grande
-						<option value="Sabana Grande">Sabana Grande
-						<option value="Salinas">Salinas
-						<option value="San German">San German
-						<option value="San Juan">San Juan
-						<option value="San Lorenzo">San Lorenzo
-						<option value="San Sebastian">San Sebastian
-						<option value="Santa Isabel">Santa Isabel
-						<option value="Toa Alta">Toa Alta
-						<option value="Toa Baja">Toa Baja
-						<option value="Trujillo Alto">Trujillo Alto
-						<option value="Utuado">Utuado
-						<option value="Vega Baja">Vega Baja
-						<option value="Vega Alta">Vega Alta
-						<option value="Vieques">Vieques
-						<option value="Villalba">Villalba
-						<option value="Yabucoa">Yabucoa
-						<option value="Yauco">Yauco
-					</select>
-    <input type="hidden" name="dropdown" id="dropdown">
-    <div>
-    <input class="btn1 btn-large btn-success" type="submit"
-									value="Quick Search">
-	
-									
-    </form>
-	<input class="btn1 btn-large btn-info" type="submit"
-									value="  Advanced  ">
-									</div>
-									
-									<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6bocwBcmpSmNNBYfnA8s-so9mC5G9j4&sensor=false&extension=.js'></script> 
- 
-<script> 
+					<option value="From:">From:
+					<option value="Adjuntas">Adjuntas
+					<option value="Aguada">Aguada
+					<option value="Aguadilla">Aguadilla
+					<option value="Aguas Buenas">Aguas Buenas
+					<option value="Aibonito">Aibonito
+					<option value="Añasco">Añasco
+					<option value="Arecibo">Arecibo
+					<option value="Arroyo">Arroyo
+					<option value="Barceloneta">Barceloneta
+					<option value="Barranquitas">Barranquitas
+					<option value="Bayamon">Bayamon
+					<option value="Cabo Rojo">Cabo Rojo
+					<option value="Caguas">Caguas
+					<option value="Camuy">Camuy
+					<option value="Canovanas">Canovanas
+					<option value="Carolina">Carolina
+					<option value="Cataño">Cataño
+					<option value="Cayey">Cayey
+					<option value="Ceiba">Ceiba
+					<option value="Ciales">Ciales
+					<option value="Cidra">Cidra
+					<option value="Coamo">Coamo
+					<option value="Comerio">Comerio
+					<option value="Corozal">Corozal
+					<option value="Culebra">Culebra
+					<option value="Dorado">Dorado
+					<option value="Fajardo">Fajardo
+					<option value="Florida">Florida
+					<option value="Guanica">Guanica
+					<option value="Guayama">Guayama
+					<option value="Guayanilla">Guayanilla
+					<option value="Guaynabo">Guaynabo
+					<option value="Gurabo">Gurabo
+					<option value="Hatillo">Hatillo
+					<option value="Hormigueros">Hormigueros
+					<option value="Humacao">Humacao
+					<option value="Isabela">Isabela
+					<option value="Jayuya">Jayuya
+					<option value="Juana Diaz">Juana Diaz
+					<option value="Juncos">Juncos
+					<option value="Lajas">Lajas
+					<option value="Lares">Lares
+					<option value="Las Marias">Las Marias
+					<option value="Las Piedras">Las Piedras
+					<option value="Loiza">Loiza
+					<option value="Luquillo">Luquillo
+					<option value="Manati">Manati
+					<option value="Maricao">Maricao
+					<option value="Maunabo">Maunabo
+					<option value="Mayaguez">Mayaguez
+					<option value="Moca">Moca
+					<option value="Morovis">Morovis
+					<option value="Naguabo">Naguabo
+					<option value="Naranjito">Naranjito
+					<option value="Orocovis">Orocovis
+					<option value="Patillas">Patillas
+					<option value="Peñuelas">Peñuelas
+					<option value="Ponce">Ponce
+					<option value="Quebradillas">Quebradillas
+					<option value="Rincón">Rincón
+					<option value="Rio Grande">Rio Grande
+					<option value="Sabana Grande">Sabana Grande
+					<option value="Salinas">Salinas
+					<option value="San German">San German
+					<option value="San Juan">San Juan
+					<option value="San Lorenzo">San Lorenzo
+					<option value="San Sebastian">San Sebastian
+					<option value="Santa Isabel">Santa Isabel
+					<option value="Toa Alta">Toa Alta
+					<option value="Toa Baja">Toa Baja
+					<option value="Trujillo Alto">Trujillo Alto
+					<option value="Utuado">Utuado
+					<option value="Vega Baja">Vega Baja
+					<option value="Vega Alta">Vega Alta
+					<option value="Vieques">Vieques
+					<option value="Villalba">Villalba
+					<option value="Yabucoa">Yabucoa
+					<option value="Yauco">Yauco
+				</select> <select id="To" name="to" onchange="return setValue();">
+					<option value="To:">To:
+					<option value="Adjuntas">Adjuntas
+					<option value="Aguada">Aguada
+					<option value="Aguadilla">Aguadilla
+					<option value="Aguas Buenas">Aguas Buenas
+					<option value="Aibonito">Aibonito
+					<option value="Añasco">Añasco
+					<option value="Arecibo">Arecibo
+					<option value="Arroyo">Arroyo
+					<option value="Barceloneta">Barceloneta
+					<option value="Barranquitas">Barranquitas
+					<option value="Bayamon">Bayamon
+					<option value="Cabo Rojo">Cabo Rojo
+					<option value="Caguas">Caguas
+					<option value="Camuy">Camuy
+					<option value="Canovanas">Canovanas
+					<option value="Carolina">Carolina
+					<option value="Cataño">Cataño
+					<option value="Cayey">Cayey
+					<option value="Ceiba">Ceiba
+					<option value="Ciales">Ciales
+					<option value="Cidra">Cidra
+					<option value="Coamo">Coamo
+					<option value="Comerio">Comerio
+					<option value="Corozal">Corozal
+					<option value="Culebra">Culebra
+					<option value="Dorado">Dorado
+					<option value="Fajardo">Fajardo
+					<option value="Florida">Florida
+					<option value="Guanica">Guanica
+					<option value="Guayama">Guayama
+					<option value="Guayanilla">Guayanilla
+					<option value="Guaynabo">Guaynabo
+					<option value="Gurabo">Gurabo
+					<option value="Hatillo">Hatillo
+					<option value="Hormigueros">Hormigueros
+					<option value="Humacao">Humacao
+					<option value="Isabela">Isabela
+					<option value="Jayuya">Jayuya
+					<option value="Juana Diaz">Juana Diaz
+					<option value="Juncos">Juncos
+					<option value="Lajas">Lajas
+					<option value="Lares">Lares
+					<option value="Las Marias">Las Marias
+					<option value="Las Piedras">Las Piedras
+					<option value="Loiza">Loiza
+					<option value="Luquillo">Luquillo
+					<option value="Manati">Manati
+					<option value="Maricao">Maricao
+					<option value="Maunabo">Maunabo
+					<option value="Mayaguez">Mayaguez
+					<option value="Moca">Moca
+					<option value="Morovis">Morovis
+					<option value="Naguabo">Naguabo
+					<option value="Naranjito">Naranjito
+					<option value="Orocovis">Orocovis
+					<option value="Patillas">Patillas
+					<option value="Peñuelas">Peñuelas
+					<option value="Ponce">Ponce
+					<option value="Quebradillas">Quebradillas
+					<option value="Rincón">Rincón
+					<option value="Rio Grande">Rio Grande
+					<option value="Sabana Grande">Sabana Grande
+					<option value="Salinas">Salinas
+					<option value="San German">San German
+					<option value="San Juan">San Juan
+					<option value="San Lorenzo">San Lorenzo
+					<option value="San Sebastian">San Sebastian
+					<option value="Santa Isabel">Santa Isabel
+					<option value="Toa Alta">Toa Alta
+					<option value="Toa Baja">Toa Baja
+					<option value="Trujillo Alto">Trujillo Alto
+					<option value="Utuado">Utuado
+					<option value="Vega Baja">Vega Baja
+					<option value="Vega Alta">Vega Alta
+					<option value="Vieques">Vieques
+					<option value="Villalba">Villalba
+					<option value="Yabucoa">Yabucoa
+					<option value="Yauco">Yauco
+				</select> <input type="hidden" name="dropdown" id="dropdown">
+				<div>
+					<input class="btn1 btn-large btn-success" type="submit"
+						value="Quick Search">
+					<a class="btn1 btn-large btn-info" href="/EcoShare/FindaRide.jsp">Advanced</a>
+						
+				</div>
+			</form>			
+			
+			<script
+				src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6bocwBcmpSmNNBYfnA8s-so9mC5G9j4&sensor=false&extension=.js'></script>
+
+			<script> 
     google.maps.event.addDomListener(window, 'load', init);
     var map;
     function init() {
@@ -445,28 +444,31 @@ body {
 
 }
 </script>
-<style>
-    #EcoShare {
-        height:500px;
-        width:650px;
-        text-align: center;
-         margin-left: auto;
-  		margin-right: auto;
-    }
-    .gm-style-iw * {
-        display: block;
-        width: 50%;
-    }
-    .gm-style-iw h4, .gm-style-iw p {
-        margin: 0;
-        padding: 0;
-    }
-    .gm-style-iw a {
-        color: #4272db;
-    }
+			<style>
+#EcoShare {
+	height: 500px;
+	width: 650px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gm-style-iw * {
+	display: block;
+	width: 50%;
+}
+
+.gm-style-iw h4, .gm-style-iw p {
+	margin: 0;
+	padding: 0;
+}
+
+.gm-style-iw a {
+	color: #4272db;
+}
 </style>
-	<div id='EcoShare'></div>
-		
+			<div id='EcoShare'></div>
+
 		</div>
 		<!-- Example row of columns -->
 		<div class="row-fluid">
