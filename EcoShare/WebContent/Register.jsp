@@ -171,8 +171,7 @@ function validateForm() {
       <!-- Jumbotron -->
       <div class="jumbotron">
         
-          <img src="/EcoShare/Register.png" width="279" height="52" align="absmiddle"></br>
-          <img src="/EcoShare/RegisterInfo.png" width="279" height="52" align="absmiddle"></br>
+          <h2 class="form-signin-heading">Register</h2>
           <form id="index" name="myForm" method="post" action="Register" onsubmit="return validateForm()">
 					<input type="text" name="email" placeholder="Email:"></br>
 					<input type="text" name="name" placeholder="Name:"></br>

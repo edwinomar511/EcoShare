@@ -186,7 +186,8 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-<img src="/EcoShare/shareaRide.png" width="279" height="52" align="absmiddle"></br>				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
+				<h2 class="form-signin-heading">Share a Ride</h2>
+				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
 						<option value="mayaguez">Mayaguez
@@ -199,9 +200,11 @@ body {
 						<option value="cidra">Cidra
 					</select>
 					<div>
-<img src="/EcoShare/SelectPrice.png" width="279" height="52" align="absmiddle"></br>					<input type="number" min=0 name="price" placeholder="Price"> 
+					<h2>Select a Price for Your Ride:</h2>
+					<input type="number" min=0 name="price" placeholder="Price"> 
 					</div>
-<img src="/EcoShare/Date&Time.png" width="279" height="52" align="absmiddle"></br>
+					<h2 class="form-signin-heading">Date & Time</h2>
+
 					<div id="datetimepicker4" class="input-append">
 						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span
 							class="add-on"> <i data-time-icon="icon-time"
@@ -239,9 +242,11 @@ body {
 				<input type="hidden" name="dropdown" id="dropdown">
 				
 				<br/>
-<img src="/EcoShare/email.png" width="279" height="52" align="absmiddle"></br>				<input type="text" name="email" placeholder="Enter an Email:">
+				<h2>Enter an Email:</h2>
+				<input type="text" name="email" placeholder="Enter an Email:">
 				<br/>
-<img src="/EcoShare/Comments.png" width="279" height="52" align="absmiddle"></br>				<textarea name="comments" cols="40" rows="2">Please limit your response to 200 characters.</textarea>
+				<h3>Comments:</h3>
+				<textarea name="comments" cols="40" rows="2">Please limit your response to 200 characters.</textarea>
 				
 				<div>
 					<input class="btn1 btn-large btn-success" type="submit"
