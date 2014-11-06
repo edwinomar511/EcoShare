@@ -51,10 +51,6 @@ public class QueryManager {
 		return true;
 	}
 
-	public boolean removeRide(String rideID){
-		return false;
-	}
-
 	public boolean verifyUser(String email){
 		try {
 			statement = connect.createStatement();
@@ -69,12 +65,6 @@ public class QueryManager {
 			close();
 			return false;
 		}
-	}
-
-	
-	public boolean removeUser(String userID){
-		return false;
-
 	}
 
 	public boolean close(){
@@ -108,6 +98,49 @@ public class QueryManager {
 		}
 
 		return result;
+	}
+	
+	public String[] rideInfo(String rideID){
+		try {
+			statement = connect.createStatement();
+			resultSet = statement.executeQuery("SELECT from_location, to_location, date, time, price, comment, name, telephone, make, model, year, positive_ratings, negative_ratings"
+					+ "FROM Ride, User, Car, Rating, hasCar, Share"
+					+ "WHERE Ride.ride_id = '" + rideID + "' "
+					+ "AND Share.ride_id = Ride.ride_id"
+					+ "AND Share.user_id = User.user_id"
+					+ "AND hasCar.user_id = User.user_id"
+					+ "AND hasCar.car_id = Car.car_id;");
+			
+		}catch (Exception e){
+			close();
+			return null;
+		}
+		
+		String[] info = new String[13];
+		try {
+			while(resultSet.next())
+			{
+				info[0] = resultSet.getString("from_location");
+				info[1] = resultSet.getString("to_location");
+				info[2] = resultSet.getDate("date").toString();
+				info[3] = resultSet.getTime("time").toString();
+				info[4] = resultSet.getDouble("price")+"";
+				info[5] = resultSet.getString("comment");
+				info[6] = resultSet.getString("name");
+				info[7] = resultSet.getInt("telephone") + "";
+				info[8] = resultSet.getString("make");
+				info[9] = resultSet.getString("model");
+				info[10] = resultSet.getInt("year") + "";
+				info[11] = resultSet.getInt("positive_ratings") + "";
+				info[12] = resultSet.getInt("negative_ratings") + "";				
+			}
+		} catch (SQLException e) {
+			close();
+			return null;
+		}finally{
+			close();
+		}
+		return info;
 	}
 
 }

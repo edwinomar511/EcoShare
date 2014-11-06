@@ -163,6 +163,7 @@ body {
  		<h3>Time: ${time} </h3>		
 		<h3>Price: ${price}</h3>
 		<h3>Ride: ${ride}</h3>
+		<div type=></div>
 		<h2 class="form-signin-heading">User Information</h2>
 		<h3>${name}</h3>
 		<h3>Telephone Number: ${phone} </h3>

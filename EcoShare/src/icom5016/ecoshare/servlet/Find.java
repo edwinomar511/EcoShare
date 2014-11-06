@@ -63,7 +63,6 @@ public class Find extends HttpServlet {
 		String rideid = ride[0];
 		
 		request.getSession().setAttribute("rideID", rideid);
-		request.getSession().setAttribute("ride", query);
 		request.getRequestDispatcher("/RideInformation.jsp").forward(request, response);
 		return;
 		
