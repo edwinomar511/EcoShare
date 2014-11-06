@@ -375,11 +375,12 @@ body {
     <div>
     <input class="btn1 btn-large btn-success" type="submit"
 									value="Quick Search">
+	
+									
+    </form>
 	<input class="btn1 btn-large btn-info" type="submit"
 									value="  Advanced  ">
 									</div>
-    </form>
-
 	<div id="map-canvas"></div>
 		
 		</div>

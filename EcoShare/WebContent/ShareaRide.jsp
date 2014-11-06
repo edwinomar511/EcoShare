@@ -186,7 +186,7 @@ body {
 
 		<!-- Jumbotron -->
 		<div class="jumbotron">
-	<img src="/EcoShare/ShareaRide.png" width="279" height="52" align="absmiddle"></br>
+	<img src="/EcoShare/shareaRide.png" width="279" height="52" align="absmiddle"></br>
 				<form id="index" name="myForm" method="post" action="ShareaRide" onsubmit="return validateForm()">
 					<select id="From" name="from" onchange="return setValue();">
 						<option value="From:">From:
