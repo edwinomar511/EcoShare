@@ -4,9 +4,6 @@ import icom5016.ecoshare.Main.QueryManager;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.Time;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
