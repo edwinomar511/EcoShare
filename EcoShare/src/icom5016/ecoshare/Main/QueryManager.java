@@ -132,7 +132,7 @@ public class QueryManager {
 				info[9] = resultSet.getString("model");
 				info[10] = resultSet.getInt("year") + "";
 				info[11] = resultSet.getInt("positive_ratings") + "";
-				info[12] = resultSet.getInt("negative_ratings") + "";				
+				info[12] = resultSet.getInt("negative_ratings") + "";
 			}
 		} catch (SQLException e) {
 			close();
