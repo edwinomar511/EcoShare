@@ -323,11 +323,11 @@ body {
 						<option value="Yauco">Yauco
 					</select>
 					<div>
-					<h2>Select a Price Range:</h2>
+<img src="/EcoShare/SelectPrice.png" width="279" height="52" align="absmiddle"></br>				<form id="index" method="post" action="FindaRide">
 					<input type="number" min=0 name="minprice" placeholder="Minimum Price"> 
 					<input type="number" name="maxprice" placeholder="Maximum Price">
 					</div>
-					<h2 class="form-signin-heading">Date & Time</h2>
+<img src="/EcoShare/Date&Time.png" width="279" height="52" align="absmiddle"></br>				<form id="index" method="post" action="FindaRide">
 
 					<div id="datetimepicker4" class="input-append">
 						<input data-format="yyyy-MM-dd" type="text" name="date"></input> <span
